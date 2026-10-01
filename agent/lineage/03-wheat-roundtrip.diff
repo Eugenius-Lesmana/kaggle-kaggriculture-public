@@ -1,0 +1,104 @@
+diff --git a/main.py b/main.py   # + race  ->  + wheat round-trip
+index 29cdc45..dab33df 100644
+--- a/main.py
++++ b/main.py
+@@ -10223,3 +10223,99 @@ def agent(observation, configuration=None):
+ 
+ agent.telemetry = _COUNTER_REPORT
+ agent = globals().pop("agent")
++
++
++# Wheat lead: move an already-scheduled tape sale to the buy turn, after its
++# BUY_PRODUCT order. R36's existing debt mechanism suppresses that later sale.
++_WHEAT_PARENT = agent
++_WHEAT_REPORT = dict(wheat_leads=0, wheat_units=0, predicted_margin=0, errors=0)
++_WHEAT_SHOPS = {'BAKERY', 'PIZZA_SHOP', 'BRUNCH_SPOT', 'ICE_CREAM_SHOP', 'FARMERS_MARKET'}
++
++
++def _wheat_lead(obs, action):
++    player, step = int(obs['player']), int(obs['step'])
++    if not 216 <= step < 696 or not _COUNTER_MIRRORS.get(player):
++        return action
++    orders = action.get('market') or []
++    if len(orders) >= 10 or any(o[:2] == ['SELL', 'WHEAT'] for o in orders):
++        return action
++    bought = sum(max(0, int(o[2])) for o in orders
++                 if len(o) >= 3 and o[:2] == ['BUY_PRODUCT', 'WHEAT'])
++    if not bought:
++        return action
++
++    native = _IMPL.chassis.players[player]
++    route = _IMPL.chassis.routes[native['route']]
++    debts = native['sell_state'].setdefault('r36_debts', {})
++    due, planned = None, 0
++    for future in range(step + 1, min(step + 11, 696)):
++        tape = route[future]
++        work = [tape.get('farmer') or ['PASS'], *(tape.get('hands') or [])]
++        if any(c[:2] == ['PICKUP', 'WHEAT'] for c in work):
++            break
++        future_orders = tape.get('market') or []
++        if any(o[:2] == ['BUY_PRODUCT', 'WHEAT'] for o in future_orders):
++            break
++        planned = sum(max(0, int(o[2])) for o in future_orders
++                      if len(o) >= 3 and o[:2] == ['SELL', 'WHEAT'])
++        planned -= debts.get(future, {}).get('WHEAT', 0)
++        if planned > 0:
++            due = future
++            break
++    if due is None:
++        return action
++
++    stock = projected_shed(action, FarmView(obs))
++    # The price model is money-unbounded and does not enforce shed capacity.
++    # Only advance a sale when the parent's full current wheat buy can fill.
++    if sum(max(0, int(n)) for n in stock.values()) + bought > 100:
++        return action
++    quantity = min(planned, max(0, int(stock.get('WHEAT', 0))) + bought)
++    if quantity <= 0:
++        return action
++
++    # Exact current lockstep; future one-step quote under a symmetric tape.
++    # The candidate changes no BUY_PRODUCT order or worker instruction.
++    params = _v44y_params(obs)
++    inventory = obs['market']['inventory']
++    mirror = orders
++    early = [list(o) for o in orders] + [['SELL', 'WHEAT', quantity]]
++    current = _v44y_lockstep(orders, mirror, inventory, stock, stock, params)
++    advanced = _v44y_lockstep(early, mirror, inventory, stock, stock, params)
++    cash_now = advanced[0] - current[0]
++    next_inventory = int(inventory['WHEAT']) - 2 * bought
++    if step % 4 == 0:
++        next_inventory -= sum(1 for s in obs['town']['unlocked_shops'] if s in _WHEAT_SHOPS)
++    if step % 24 == 0:
++        next_inventory -= 1
++    future_inv = dict(inventory, WHEAT=next_inventory)
++    sale = [['SELL', 'WHEAT', quantity]]
++    next_stock = {'WHEAT': quantity}
++    baseline = _v44y_lockstep(sale, sale, future_inv, next_stock, next_stock, params)
++    shifted = _v44y_lockstep([], sale, dict(future_inv, WHEAT=next_inventory + quantity),
++                             {}, next_stock, params)
++    own_gain = cash_now - baseline[0]
++    margin = own_gain + baseline[1] - shifted[1]
++    if own_gain < 0 or margin < 1:
++        return action
++    debt = debts.setdefault(due, {})
++    debt['WHEAT'] = debt.get('WHEAT', 0) + quantity
++    _WHEAT_REPORT['wheat_leads'] += 1
++    _WHEAT_REPORT['wheat_units'] += quantity
++    _WHEAT_REPORT['predicted_margin'] += margin
++    return dict(action, market=early)
++
++
++def agent(observation, configuration=None):
++    if int(observation.get('step', 0)) == 0:
++        _WHEAT_REPORT.update(wheat_leads=0, wheat_units=0, predicted_margin=0, errors=0)
++    action = _WHEAT_PARENT(observation, configuration)
++    try:
++        return _wheat_lead(observation, action)
++    except Exception:
++        _WHEAT_REPORT['errors'] += 1
++        return action
++
++
++agent.telemetry = _WHEAT_REPORT
++agent = globals().pop('agent')

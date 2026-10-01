@@ -1,0 +1,96 @@
+diff --git a/main.py b/main.py   # F4 (public notebook, unmodified)  ->  F4 + counter
+index ef309b7..ecd72b9 100644
+--- a/main.py
++++ b/main.py
+@@ -10135,3 +10135,91 @@ def step1009_step1008_fortyfirst_final_fixedsell_closure_agent(observation,confi
+ step1009_step1008_fortyfirst_final_fixedsell_closure_agent.telemetry=_S1009_REPORT
+ agent=step1009_step1008_fortyfirst_final_fixedsell_closure_agent
+ kaggle_submission_agent=agent
++
++
++
++
++# Family counter: respond to a mirror's final V44Y order, not its input order.
++# The mirror is identified while the two banks still agree; our later sales may
++# split them. Only SELL order within a contiguous block changes.
++# The parent is whatever the Kaggle loader would have run: the last callable defined.
++_COUNTER_PARENT = [_v for _v in globals().values() if callable(_v)][-1]
++_COUNTER_MIRRORS = {}
++_COUNTER_REPORT = dict(counter_turns=0, counter_predicted_margin=0.0, counter_errors=0)
++
++
++def _counter_reorder(obs, action):
++    player = int(obs["player"])
++    step = int(obs["step"])
++    if not 216 <= step < 696:
++        return action
++    farm, rival = obs["farms"][player], obs["farms"][1 - player]
++    race = _RACE_STATE.get(player) or {}
++    if not _COUNTER_MIRRORS.get(player):
++        if (race.get("horizon", 0) <= 0 or farm["money"] != rival["money"]
++                or not _race_positions_equal(obs["farms"], player)
++                or _r37_similarity(obs) < 0.99):
++            return action
++        _COUNTER_MIRRORS[player] = True
++
++    orders = action.get("market") or []
++    if len(orders) < 2:
++        return action
++    blocks = []
++    i = 0
++    while i < len(orders):
++        if orders[i] and orders[i][0] == "SELL":
++            j = i + 1
++            while j < len(orders) and orders[j] and orders[j][0] == "SELL":
++                j += 1
++            if 2 <= j - i <= 6:
++                blocks.append((i, j))
++            i = j
++        else:
++            i += 1
++    if not blocks:
++        return action
++
++    stock = projected_shed(action, FarmView(obs))
++    stock = {item: max(0, int(qty)) for item, qty in stock.items()}
++    margin = _v44y_factor_margin(orders, obs["market"]["inventory"], stock, _v44y_params(obs))
++    selected = [list(order) for order in orders]
++    original = margin(selected)
++    best = original
++    for i, j in blocks:
++        block = selected[i:j]
++        seen = set()
++        next_orders = None
++        for perm in _v44y_it.permutations(block):
++            key = tuple(tuple(order) for order in perm)
++            if key in seen:
++                continue
++            seen.add(key)
++            candidate = selected[:i] + list(perm) + selected[j:]
++            score = margin(candidate)
++            if score > best + 0.5:
++                best, next_orders = score, candidate
++        if next_orders is not None:
++            selected = next_orders
++    if best <= original + 0.5:
++        return action
++    _COUNTER_REPORT["counter_turns"] += 1
++    _COUNTER_REPORT["counter_predicted_margin"] += best - original
++    return dict(action, market=selected)
++
++
++def agent(observation, configuration=None):
++    player, step = int(observation["player"]), int(observation["step"])
++    if step == 0:
++        _COUNTER_MIRRORS[player] = False
++        _COUNTER_REPORT.update(counter_turns=0, counter_predicted_margin=0.0, counter_errors=0)
++    action = _COUNTER_PARENT(observation, configuration)
++    try:
++        return _counter_reorder(observation, action)
++    except Exception:
++        _COUNTER_REPORT["counter_errors"] += 1
++        return action
++
++
++agent.telemetry = _COUNTER_REPORT
++agent = globals().pop("agent")

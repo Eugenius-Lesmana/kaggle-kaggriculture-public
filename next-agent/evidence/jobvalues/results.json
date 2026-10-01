@@ -1,0 +1,148 @@
+{
+  "seed": 20260930,
+  "games": {
+    "24_train": 34,
+    "24_test": 5,
+    "29_train": 429,
+    "29_test": 107
+  },
+  "coverage": {
+    "within_multi": 114249,
+    "next_attempt": 28591,
+    "next_uncovered": 2072
+  },
+  "models": {
+    "within": {
+      "train_choices": 91979,
+      "train_rows": 223638,
+      "test": {
+        "n": 22270,
+        "top1": 0.8847,
+        "top3": 0.9967,
+        "cell_rule": 0.6009,
+        "by_command": {
+          "CARE": {
+            "n": 2600,
+            "recall": 0.7585,
+            "precision": 0.8883,
+            "f1": 0.8183,
+            "baseline_recall": 0.0,
+            "baseline_precision": null,
+            "baseline_f1": 0.0
+          },
+          "COLLECT_FERTILIZER": {
+            "n": 3044,
+            "recall": 0.7858,
+            "precision": 0.8648,
+            "f1": 0.8234,
+            "baseline_recall": 1.0,
+            "baseline_precision": 0.3976,
+            "baseline_f1": 0.569
+          },
+          "FEED": {
+            "n": 3200,
+            "recall": 1.0,
+            "precision": 0.739,
+            "f1": 0.8499,
+            "baseline_recall": 0.4019,
+            "baseline_precision": 0.7241,
+            "baseline_f1": 0.5169
+          },
+          "FERTILIZE": {
+            "n": 2051,
+            "recall": 0.9215,
+            "precision": 0.826,
+            "f1": 0.8712,
+            "baseline_recall": 0.0166,
+            "baseline_precision": 0.1298,
+            "baseline_f1": 0.0294
+          },
+          "HARVEST": {
+            "n": 2667,
+            "recall": 0.7255,
+            "precision": 0.8921,
+            "f1": 0.8002,
+            "baseline_recall": 0.1162,
+            "baseline_precision": 0.4128,
+            "baseline_f1": 0.1814
+          },
+          "WATER": {
+            "n": 8708,
+            "recall": 0.9548,
+            "precision": 0.9785,
+            "f1": 0.9665,
+            "baseline_recall": 1.0,
+            "baseline_precision": 0.7363,
+            "baseline_f1": 0.8482
+          }
+        }
+      }
+    },
+    "next": {
+      "train_choices": 21239,
+      "train_rows": 2760901,
+      "test": {
+        "n": 5280,
+        "top1": 0.5098,
+        "top3": 0.7443,
+        "nearest_due_job": 0.0661,
+        "by_command": {
+          "CARE": {
+            "n": 178,
+            "recall": 0.0056,
+            "precision": 0.0588,
+            "f1": 0.0103,
+            "baseline_recall": 0.1966,
+            "baseline_precision": 0.0217,
+            "baseline_f1": 0.039
+          },
+          "COLLECT_FERTILIZER": {
+            "n": 518,
+            "recall": 0.388,
+            "precision": 0.349,
+            "f1": 0.3675,
+            "baseline_recall": 0.0019,
+            "baseline_precision": 0.0179,
+            "baseline_f1": 0.0035
+          },
+          "FEED": {
+            "n": 801,
+            "recall": 0.5493,
+            "precision": 0.4889,
+            "f1": 0.5173,
+            "baseline_recall": 0.0137,
+            "baseline_precision": 0.4074,
+            "baseline_f1": 0.0266
+          },
+          "FERTILIZE": {
+            "n": 756,
+            "recall": 0.5172,
+            "precision": 0.5262,
+            "f1": 0.5217,
+            "baseline_recall": 0.1323,
+            "baseline_precision": 0.0849,
+            "baseline_f1": 0.1034
+          },
+          "HARVEST": {
+            "n": 654,
+            "recall": 0.3333,
+            "precision": 0.4966,
+            "f1": 0.3989,
+            "baseline_recall": 0.052,
+            "baseline_precision": 0.0177,
+            "baseline_f1": 0.0264
+          },
+          "WATER": {
+            "n": 2373,
+            "recall": 0.6072,
+            "precision": 0.5532,
+            "f1": 0.5789,
+            "baseline_recall": 0.0708,
+            "baseline_precision": 0.35,
+            "baseline_f1": 0.1178
+          }
+        }
+      }
+    }
+  }
+}

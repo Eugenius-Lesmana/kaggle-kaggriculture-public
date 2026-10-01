@@ -1,0 +1,2438 @@
+[
+ {
+  "replay": "113865001.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113865001.json.gz",
+  "player": 1,
+  "team": "team-b9e0dd",
+  "best": "metav4",
+  "worker_match": 0.0097,
+  "market_match": 0.3199,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113866232.json.gz",
+  "player": 0,
+  "team": "team-3d23f7",
+  "best": "metav4",
+  "worker_match": 0.0125,
+  "market_match": 0.2058,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113866232.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113867504.json.gz",
+  "player": 0,
+  "team": "team-d1fe8e",
+  "best": "metav4",
+  "worker_match": 0.0264,
+  "market_match": 0.2239,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113867504.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113868691.json.gz",
+  "player": 0,
+  "team": "team-a4f8a8",
+  "best": "metav4",
+  "worker_match": 0.0223,
+  "market_match": 0.2197,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113868691.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113869993.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113869993.json.gz",
+  "player": 1,
+  "team": "team-5fec22",
+  "best": "metav4",
+  "worker_match": 0.0223,
+  "market_match": 0.2656,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113871162.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113871162.json.gz",
+  "player": 1,
+  "team": "team-5c9de9",
+  "best": "F1",
+  "worker_match": 0.0139,
+  "market_match": 0.2462,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113872402.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113872402.json.gz",
+  "player": 1,
+  "team": "team-96e910",
+  "best": "more_wheat",
+  "worker_match": 0.0306,
+  "market_match": 0.2629,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113873620.json.gz",
+  "player": 0,
+  "team": "team-2a34b6",
+  "best": "more_wheat",
+  "worker_match": 0.701,
+  "market_match": 0.5035,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113873620.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113874850.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113874850.json.gz",
+  "player": 1,
+  "team": "team-c838a3",
+  "best": "metav4",
+  "worker_match": 0.9819,
+  "market_match": 0.6996,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113876085.json.gz",
+  "player": 0,
+  "team": "team-6992f6",
+  "best": "metav4",
+  "worker_match": 0.9917,
+  "market_match": 0.6398,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113876085.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113877309.json.gz",
+  "player": 0,
+  "team": "team-256357",
+  "best": "metav4",
+  "worker_match": 0.9917,
+  "market_match": 0.694,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113877309.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113878544.json.gz",
+  "player": 0,
+  "team": "team-5880b4",
+  "best": "F2",
+  "worker_match": 0.9986,
+  "market_match": 0.8248,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113878544.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113879787.json.gz",
+  "player": 0,
+  "team": "team-33e6be",
+  "best": "metav4",
+  "worker_match": 0.975,
+  "market_match": 0.9917,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113879787.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113881013.json.gz",
+  "player": 0,
+  "team": "team-f03be2",
+  "best": "metav4",
+  "worker_match": 0.9708,
+  "market_match": 0.9555,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113881013.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113881296.json.gz",
+  "player": 0,
+  "team": "team-4ddfb4",
+  "best": "metav4",
+  "worker_match": 0.9652,
+  "market_match": 0.8999,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113881296.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113882261.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113882261.json.gz",
+  "player": 1,
+  "team": "team-e26f1a",
+  "best": "metav4",
+  "worker_match": 0.9652,
+  "market_match": 0.8609,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113883512.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9986,
+  "first_divergence": 527,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113883512.json.gz",
+  "player": 1,
+  "team": "team-7128a0",
+  "best": "metav4",
+  "worker_match": 0.9708,
+  "market_match": 0.8887,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113884790.json.gz",
+  "player": 0,
+  "team": "team-69ea90",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113884790.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113886060.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113886060.json.gz",
+  "player": 1,
+  "team": "team-4cc624",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113887304.json.gz",
+  "player": 0,
+  "team": "team-719fe4",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9847,
+  "first_divergence": 361,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113887304.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113888536.json.gz",
+  "player": 0,
+  "team": "team-a69b7a",
+  "best": "metav4",
+  "worker_match": 0.975,
+  "market_match": 0.943,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113888536.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113889178.json.gz",
+  "player": 0,
+  "team": "team-ae982e",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113889178.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113889850.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113889850.json.gz",
+  "player": 1,
+  "team": "team-349077",
+  "best": "more_wheat",
+  "worker_match": 0.0097,
+  "market_match": 0.2476,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113891229.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113891229.json.gz",
+  "player": 1,
+  "team": "team-9a3ec1",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.8776,
+  "first_divergence": 91,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113892351.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113892351.json.gz",
+  "player": 1,
+  "team": "team-a64c8d",
+  "best": "metav4",
+  "worker_match": 0.0083,
+  "market_match": 0.1655,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113893578.json.gz",
+  "player": 0,
+  "team": "team-dd03ae",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.7636,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113893578.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113894840.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9986,
+  "first_divergence": 575,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113894840.json.gz",
+  "player": 1,
+  "team": "team-805a49",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9889,
+  "first_divergence": 420,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113896082.json.gz",
+  "player": 0,
+  "team": "team-2b30ef",
+  "best": "more_wheat",
+  "worker_match": 0.0111,
+  "market_match": 0.3394,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113896082.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113897324.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113897324.json.gz",
+  "player": 1,
+  "team": "team-42ee28",
+  "best": "metav4",
+  "worker_match": 0.968,
+  "market_match": 0.8248,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113898748.json.gz",
+  "player": 0,
+  "team": "team-d19863",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113898748.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113899989.json.gz",
+  "player": 0,
+  "team": "team-7a3a89",
+  "best": "F2",
+  "worker_match": 1.0,
+  "market_match": 0.8637,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113899989.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113901223.json.gz",
+  "player": 0,
+  "team": "team-70eac0",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.8554,
+  "first_divergence": 121,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113901223.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113902480.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113902480.json.gz",
+  "player": 1,
+  "team": "team-680bcd",
+  "best": "F2",
+  "worker_match": 1.0,
+  "market_match": 0.8609,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113903373.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113903373.json.gz",
+  "player": 1,
+  "team": "team-33c58b",
+  "best": "F1",
+  "worker_match": 0.6217,
+  "market_match": 0.2684,
+  "first_divergence": 1,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113903814.json.gz",
+  "player": 0,
+  "team": "team-fc79cc",
+  "best": "F2",
+  "worker_match": 1.0,
+  "market_match": 0.9471,
+  "first_divergence": 291,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113903814.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113905121.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113905121.json.gz",
+  "player": 1,
+  "team": "team-54f571",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9777,
+  "first_divergence": 580,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113906440.json.gz",
+  "player": 0,
+  "team": "team-fd936e",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9777,
+  "first_divergence": 298,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113906440.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113907828.json.gz",
+  "player": 0,
+  "team": "team-7a97d0",
+  "best": "F2",
+  "worker_match": 0.9986,
+  "market_match": 0.9458,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113907828.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113907840.json.gz",
+  "player": 0,
+  "team": "team-4e01b2",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9986,
+  "first_divergence": 697,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113907840.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113909169.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113909169.json.gz",
+  "player": 1,
+  "team": "team-84d772",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113910479.json.gz",
+  "player": 0,
+  "team": "team-330015",
+  "best": "F2",
+  "worker_match": 0.9819,
+  "market_match": 0.9068,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113910479.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9986,
+  "first_divergence": 527,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113910535.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113910535.json.gz",
+  "player": 1,
+  "team": "team-6b6d15",
+  "best": "F1",
+  "worker_match": 0.9986,
+  "market_match": 0.943,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113911875.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113911875.json.gz",
+  "player": 1,
+  "team": "team-c52c23",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113912526.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113912526.json.gz",
+  "player": 1,
+  "team": "team-e38302",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113913212.json.gz",
+  "player": 0,
+  "team": "team-ba1761",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9958,
+  "first_divergence": 292,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113913212.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9986,
+  "first_divergence": 623,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113914528.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113914528.json.gz",
+  "player": 1,
+  "team": "team-c4f98b",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9193,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113915843.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113915843.json.gz",
+  "player": 1,
+  "team": "team-9c06ec",
+  "best": "more_wheat",
+  "worker_match": 0.9944,
+  "market_match": 0.8234,
+  "first_divergence": 25,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113917171.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113917171.json.gz",
+  "player": 1,
+  "team": "team-e2966f",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113918410.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113918410.json.gz",
+  "player": 1,
+  "team": "team-f66070",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113919853.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113919853.json.gz",
+  "player": 1,
+  "team": "team-cd63c4",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113921167.json.gz",
+  "player": 0,
+  "team": "team-6399f3",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113921167.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113922481.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113922481.json.gz",
+  "player": 1,
+  "team": "team-ec5f73",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113922485.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113922485.json.gz",
+  "player": 1,
+  "team": "team-20f780",
+  "best": "F1",
+  "worker_match": 0.9611,
+  "market_match": 0.9944,
+  "first_divergence": 278,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113923804.json.gz",
+  "player": 0,
+  "team": "team-b2768f",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9597,
+  "first_divergence": 340,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113923804.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113925127.json.gz",
+  "player": 0,
+  "team": "team-10f0e7",
+  "best": "F1",
+  "worker_match": 0.9972,
+  "market_match": 0.8693,
+  "first_divergence": 121,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113925127.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113926460.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113926460.json.gz",
+  "player": 1,
+  "team": "team-31692a",
+  "best": "F2",
+  "worker_match": 0.8929,
+  "market_match": 0.8081,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113927609.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113927609.json.gz",
+  "player": 1,
+  "team": "team-6136e4",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113929108.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113929108.json.gz",
+  "player": 1,
+  "team": "team-3a628c",
+  "best": "F1",
+  "worker_match": 0.993,
+  "market_match": 0.9652,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113930439.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113930439.json.gz",
+  "player": 1,
+  "team": "team-6686c9",
+  "best": "F2",
+  "worker_match": 0.9722,
+  "market_match": 0.9235,
+  "first_divergence": 91,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113930781.json.gz",
+  "player": 0,
+  "team": "team-e0d855",
+  "best": "F2",
+  "worker_match": 0.733,
+  "market_match": 0.6342,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113930781.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9986,
+  "first_divergence": 527,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113931771.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113931771.json.gz",
+  "player": 1,
+  "team": "team-3e53af",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9903,
+  "first_divergence": 299,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113933106.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113933106.json.gz",
+  "player": 1,
+  "team": "team-70f964",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113934460.json.gz",
+  "player": 0,
+  "team": "team-22b203",
+  "best": "F1",
+  "worker_match": 0.9986,
+  "market_match": 0.9694,
+  "first_divergence": 393,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113934460.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9986,
+  "first_divergence": 527,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113935728.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113935728.json.gz",
+  "player": 1,
+  "team": "team-30cddb",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9903,
+  "first_divergence": 392,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113937050.json.gz",
+  "player": 0,
+  "team": "team-1204a5",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113937050.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113938360.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113938360.json.gz",
+  "player": 1,
+  "team": "team-320603",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.993,
+  "first_divergence": 552,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113939676.json.gz",
+  "player": 0,
+  "team": "team-530fbf",
+  "best": "metav4",
+  "worker_match": 0.5716,
+  "market_match": 0.6328,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113939676.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113941229.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113941229.json.gz",
+  "player": 1,
+  "team": "team-f20fd6",
+  "best": "metav4",
+  "worker_match": 0.0056,
+  "market_match": 0.0431,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113942303.json.gz",
+  "player": 0,
+  "team": "team-0203cc",
+  "best": "F2",
+  "worker_match": 1.0,
+  "market_match": 0.9166,
+  "first_divergence": 299,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113942303.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113943635.json.gz",
+  "player": 0,
+  "team": "team-2448b8",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9847,
+  "first_divergence": 465,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113943635.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113944698.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113944698.json.gz",
+  "player": 1,
+  "team": "team-2fedde",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9805,
+  "first_divergence": 363,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113944948.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113944948.json.gz",
+  "player": 1,
+  "team": "team-5545d4",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113946273.json.gz",
+  "player": 0,
+  "team": "team-ce1270",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9624,
+  "first_divergence": 292,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113946273.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113947607.json.gz",
+  "player": 0,
+  "team": "team-47155a",
+  "best": "F2",
+  "worker_match": 0.9889,
+  "market_match": 0.9096,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113947607.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113948109.json.gz",
+  "player": 0,
+  "team": "team-11ee0d",
+  "best": "F2",
+  "worker_match": 0.9986,
+  "market_match": 0.8303,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113948109.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9986,
+  "first_divergence": 527,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113948927.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113948927.json.gz",
+  "player": 1,
+  "team": "team-a28559",
+  "best": "F2",
+  "worker_match": 1.0,
+  "market_match": 0.8623,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113950239.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113950239.json.gz",
+  "player": 1,
+  "team": "team-e3da88",
+  "best": "F1",
+  "worker_match": 0.9903,
+  "market_match": 0.886,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113951550.json.gz",
+  "player": 0,
+  "team": "team-a4b6d3",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113951550.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113952886.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113952886.json.gz",
+  "player": 1,
+  "team": "team-a69b7a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9986,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113958050.json.gz",
+  "player": 0,
+  "team": "team-b90e06",
+  "best": "F2",
+  "worker_match": 0.9374,
+  "market_match": 0.8456,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113958050.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113959799.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113959799.json.gz",
+  "player": 1,
+  "team": "team-c52c23",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113966487.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113966487.json.gz",
+  "player": 1,
+  "team": "team-08c06e",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113974162.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113974162.json.gz",
+  "player": 1,
+  "team": "team-78aea9",
+  "best": "more_wheat",
+  "worker_match": 0.0125,
+  "market_match": 0.1613,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113978943.json.gz",
+  "player": 0,
+  "team": "team-c7c31c",
+  "best": "metav4",
+  "worker_match": 0.0028,
+  "market_match": 0.1905,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113978943.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113986201.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "113986201.json.gz",
+  "player": 1,
+  "team": "team-4b7ca2",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.7761,
+  "first_divergence": 50,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113993990.json.gz",
+  "player": 0,
+  "team": "team-101462",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.8261,
+  "first_divergence": 121,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "113993990.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9986,
+  "first_divergence": 527,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "114001914.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "114001914.json.gz",
+  "player": 1,
+  "team": "team-7128a0",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.993,
+  "first_divergence": 154,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "114006943.json.gz",
+  "player": 0,
+  "team": "team-0a7e0d",
+  "best": "F2",
+  "worker_match": 0.9694,
+  "market_match": 0.9235,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "114006943.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "114008414.json.gz",
+  "player": 0,
+  "team": "team-fb45ea",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "114008414.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "114013129.json.gz",
+  "player": 0,
+  "team": "team-01e4f7",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9889,
+  "first_divergence": 264,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "114013129.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 0.9986,
+  "first_divergence": 527,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "114020153.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "114020153.json.gz",
+  "player": 1,
+  "team": "team-33c58b",
+  "best": "F1",
+  "worker_match": 0.6495,
+  "market_match": 0.2197,
+  "first_divergence": 1,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "114020578.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "114020578.json.gz",
+  "player": 1,
+  "team": "team-c641c7",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "114025394.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "114025394.json.gz",
+  "player": 1,
+  "team": "team-0f56c5",
+  "best": "F2",
+  "worker_match": 0.9847,
+  "market_match": 0.8261,
+  "first_divergence": 121,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "114027692.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "114027692.json.gz",
+  "player": 1,
+  "team": "team-8a5fed",
+  "best": "F1",
+  "worker_match": 0.9777,
+  "market_match": 0.8818,
+  "first_divergence": 80,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "114037249.json.gz",
+  "player": 0,
+  "team": "team-eff386",
+  "best": "F2",
+  "worker_match": 1.0,
+  "market_match": 0.7302,
+  "first_divergence": 152,
+  "note": "",
+  "exact_candidates": []
+ },
+ {
+  "replay": "114037249.json.gz",
+  "player": 1,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "114046045.json.gz",
+  "player": 0,
+  "team": "team-3cf67a",
+  "best": "F1",
+  "worker_match": 1.0,
+  "market_match": 1.0,
+  "first_divergence": null,
+  "note": "",
+  "exact_candidates": [
+   "F1",
+   "cF1"
+  ]
+ },
+ {
+  "replay": "114046045.json.gz",
+  "player": 1,
+  "team": "team-393410",
+  "best": "metav4",
+  "worker_match": 0.9332,
+  "market_match": 0.5035,
+  "first_divergence": 0,
+  "note": "",
+  "exact_candidates": []
+ }
+]

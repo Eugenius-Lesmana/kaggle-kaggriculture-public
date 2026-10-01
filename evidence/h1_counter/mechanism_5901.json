@@ -1,0 +1,546 @@
+{
+  "diagnostic_seed": 5901,
+  "reports": [
+    {
+      "agents": [
+        "agents/ours/h1-substrate-metav4/main.py",
+        "agents/ours/h1-substrate-metav4/main.py"
+      ],
+      "cash": [
+        123164.0,
+        123046.0
+      ],
+      "market_differences": [
+        {
+          "step": 388,
+          "p1": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ]
+          ],
+          "p2": [
+            [
+              "SELL",
+              "WHEAT",
+              4
+            ]
+          ]
+        },
+        {
+          "step": 401,
+          "p1": [],
+          "p2": [
+            [
+              "SELL",
+              "WHEAT",
+              2
+            ]
+          ]
+        },
+        {
+          "step": 550,
+          "p1": [
+            [
+              "SELL",
+              "WHEAT",
+              5
+            ]
+          ],
+          "p2": [
+            [
+              "SELL",
+              "WHEAT",
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "agents/ours/h1-counter-candidate/main.py",
+        "agents/ours/h1-substrate-metav4/main.py"
+      ],
+      "cash": [
+        123198.0,
+        122983.0
+      ],
+      "market_differences": [
+        {
+          "step": 388,
+          "p1": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ]
+          ],
+          "p2": [
+            [
+              "SELL",
+              "WHEAT",
+              4
+            ]
+          ]
+        },
+        {
+          "step": 401,
+          "p1": [],
+          "p2": [
+            [
+              "SELL",
+              "WHEAT",
+              2
+            ]
+          ]
+        },
+        {
+          "step": 457,
+          "p1": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              8
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "SELL",
+              "MILK",
+              4
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              3
+            ],
+            [
+              "HIRE"
+            ]
+          ],
+          "p2": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              8
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              3
+            ],
+            [
+              "SELL",
+              "MILK",
+              4
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        {
+          "step": 550,
+          "p1": [
+            [
+              "SELL",
+              "WHEAT",
+              5
+            ]
+          ],
+          "p2": [
+            [
+              "SELL",
+              "WHEAT",
+              4
+            ]
+          ]
+        },
+        {
+          "step": 577,
+          "p1": [
+            [
+              "SELL",
+              "MILK",
+              15
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              22
+            ],
+            [
+              "SELL",
+              "WOOL",
+              4
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              9
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              4
+            ]
+          ],
+          "p2": [
+            [
+              "SELL",
+              "MILK",
+              15
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              22
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              9
+            ],
+            [
+              "SELL",
+              "WOOL",
+              4
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              4
+            ]
+          ]
+        },
+        {
+          "step": 673,
+          "p1": [
+            [
+              "SELL",
+              "MILK",
+              8
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              11
+            ],
+            [
+              "SELL",
+              "CARROT",
+              2
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              2
+            ],
+            [
+              "SELL",
+              "WOOL",
+              13
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ],
+          "p2": [
+            [
+              "SELL",
+              "MILK",
+              8
+            ],
+            [
+              "SELL",
+              "CARROT",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              11
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              2
+            ],
+            [
+              "SELL",
+              "WOOL",
+              13
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "agents": [
+        "agents/ours/h1-substrate-metav4/main.py",
+        "agents/ours/h1-counter-candidate/main.py"
+      ],
+      "cash": [
+        123101.0,
+        123080.0
+      ],
+      "market_differences": [
+        {
+          "step": 388,
+          "p1": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ]
+          ],
+          "p2": [
+            [
+              "SELL",
+              "WHEAT",
+              4
+            ]
+          ]
+        },
+        {
+          "step": 401,
+          "p1": [],
+          "p2": [
+            [
+              "SELL",
+              "WHEAT",
+              2
+            ]
+          ]
+        },
+        {
+          "step": 457,
+          "p1": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              8
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              3
+            ],
+            [
+              "SELL",
+              "MILK",
+              4
+            ],
+            [
+              "HIRE"
+            ]
+          ],
+          "p2": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              8
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "SELL",
+              "MILK",
+              4
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              3
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        {
+          "step": 550,
+          "p1": [
+            [
+              "SELL",
+              "WHEAT",
+              5
+            ]
+          ],
+          "p2": [
+            [
+              "SELL",
+              "WHEAT",
+              4
+            ]
+          ]
+        },
+        {
+          "step": 577,
+          "p1": [
+            [
+              "SELL",
+              "MILK",
+              15
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              22
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              9
+            ],
+            [
+              "SELL",
+              "WOOL",
+              4
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              4
+            ]
+          ],
+          "p2": [
+            [
+              "SELL",
+              "MILK",
+              15
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              22
+            ],
+            [
+              "SELL",
+              "WOOL",
+              4
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              9
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              4
+            ]
+          ]
+        },
+        {
+          "step": 673,
+          "p1": [
+            [
+              "SELL",
+              "MILK",
+              8
+            ],
+            [
+              "SELL",
+              "CARROT",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              11
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              2
+            ],
+            [
+              "SELL",
+              "WOOL",
+              13
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ],
+          "p2": [
+            [
+              "SELL",
+              "MILK",
+              8
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              11
+            ],
+            [
+              "SELL",
+              "CARROT",
+              2
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              2
+            ],
+            [
+              "SELL",
+              "WOOL",
+              13
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

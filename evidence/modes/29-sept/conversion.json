@@ -1,0 +1,235 @@
+{
+  "PET_CAFE/CARROT": {
+    "events": 540,
+    "any_plant_72h": 322,
+    "median_first_lag_steps": 16,
+    "first_source": {
+      "NEW_OR_IDLE": 31,
+      "DIG": 47,
+      "HARVEST": 244
+    },
+    "all_plant_sources": {
+      "NEW_OR_IDLE": 233,
+      "HARVEST": 4441,
+      "DIG": 1069
+    }
+  },
+  "FARMERS_MARKET/WHEAT": {
+    "events": 535,
+    "any_plant_72h": 476,
+    "median_first_lag_steps": 10,
+    "first_source": {
+      "HARVEST": 354,
+      "NEW_OR_IDLE": 98,
+      "DIG": 24
+    },
+    "all_plant_sources": {
+      "HARVEST": 6797,
+      "DIG": 1301,
+      "NEW_OR_IDLE": 1569
+    }
+  },
+  "FARMERS_MARKET/CARROT": {
+    "events": 535,
+    "any_plant_72h": 236,
+    "median_first_lag_steps": 17,
+    "first_source": {
+      "HARVEST": 184,
+      "NEW_OR_IDLE": 13,
+      "DIG": 39
+    },
+    "all_plant_sources": {
+      "HARVEST": 2937,
+      "DIG": 640,
+      "NEW_OR_IDLE": 138
+    }
+  },
+  "FARMERS_MARKET/TOMATO": {
+    "events": 535,
+    "any_plant_72h": 119,
+    "median_first_lag_steps": 18,
+    "first_source": {
+      "NEW_OR_IDLE": 30,
+      "HARVEST": 81,
+      "DIG": 8
+    },
+    "all_plant_sources": {
+      "NEW_OR_IDLE": 212,
+      "HARVEST": 591,
+      "DIG": 85
+    }
+  },
+  "FARMERS_MARKET/STRAWBERRY": {
+    "events": 535,
+    "any_plant_72h": 323,
+    "median_first_lag_steps": 11,
+    "first_source": {
+      "NEW_OR_IDLE": 128,
+      "HARVEST": 192,
+      "DIG": 3
+    },
+    "all_plant_sources": {
+      "NEW_OR_IDLE": 1455,
+      "HARVEST": 1019,
+      "DIG": 6
+    }
+  },
+  "PIZZA_SHOP/TOMATO": {
+    "events": 523,
+    "any_plant_72h": 131,
+    "median_first_lag_steps": 16,
+    "first_source": {
+      "NEW_OR_IDLE": 36,
+      "HARVEST": 86,
+      "DIG": 9
+    },
+    "all_plant_sources": {
+      "NEW_OR_IDLE": 241,
+      "HARVEST": 701,
+      "DIG": 132
+    }
+  },
+  "PIZZA_SHOP/WHEAT": {
+    "events": 523,
+    "any_plant_72h": 491,
+    "median_first_lag_steps": 10,
+    "first_source": {
+      "HARVEST": 351,
+      "NEW_OR_IDLE": 105,
+      "DIG": 35
+    },
+    "all_plant_sources": {
+      "HARVEST": 7785,
+      "DIG": 1478,
+      "NEW_OR_IDLE": 2149
+    }
+  },
+  "ICE_CREAM_SHOP/STRAWBERRY": {
+    "events": 564,
+    "any_plant_72h": 374,
+    "median_first_lag_steps": 10,
+    "first_source": {
+      "HARVEST": 227,
+      "NEW_OR_IDLE": 147
+    },
+    "all_plant_sources": {
+      "HARVEST": 1169,
+      "NEW_OR_IDLE": 2015,
+      "DIG": 1
+    }
+  },
+  "ICE_CREAM_SHOP/WHEAT": {
+    "events": 564,
+    "any_plant_72h": 523,
+    "median_first_lag_steps": 12,
+    "first_source": {
+      "HARVEST": 395,
+      "NEW_OR_IDLE": 114,
+      "DIG": 14
+    },
+    "all_plant_sources": {
+      "HARVEST": 7374,
+      "NEW_OR_IDLE": 1752,
+      "DIG": 1264
+    }
+  },
+  "SMOOTHIE_SHOP/STRAWBERRY": {
+    "events": 545,
+    "any_plant_72h": 326,
+    "median_first_lag_steps": 10,
+    "first_source": {
+      "HARVEST": 195,
+      "NEW_OR_IDLE": 130,
+      "DIG": 1
+    },
+    "all_plant_sources": {
+      "HARVEST": 1085,
+      "NEW_OR_IDLE": 1711,
+      "DIG": 6
+    }
+  },
+  "BAKERY/WHEAT": {
+    "events": 534,
+    "any_plant_72h": 466,
+    "median_first_lag_steps": 9,
+    "first_source": {
+      "NEW_OR_IDLE": 109,
+      "HARVEST": 339,
+      "DIG": 18
+    },
+    "all_plant_sources": {
+      "NEW_OR_IDLE": 1778,
+      "HARVEST": 7805,
+      "DIG": 1416
+    }
+  },
+  "BRUNCH_SPOT/WHEAT": {
+    "events": 518,
+    "any_plant_72h": 456,
+    "median_first_lag_steps": 10,
+    "first_source": {
+      "NEW_OR_IDLE": 90,
+      "HARVEST": 352,
+      "DIG": 14
+    },
+    "all_plant_sources": {
+      "NEW_OR_IDLE": 1498,
+      "HARVEST": 7111,
+      "DIG": 1360
+    }
+  },
+  "BRUNCH_SPOT/STRAWBERRY": {
+    "events": 518,
+    "any_plant_72h": 323,
+    "median_first_lag_steps": 10,
+    "first_source": {
+      "HARVEST": 201,
+      "NEW_OR_IDLE": 121,
+      "DIG": 1
+    },
+    "all_plant_sources": {
+      "HARVEST": 1141,
+      "NEW_OR_IDLE": 1460,
+      "DIG": 9
+    }
+  },
+  "crop_digs": {
+    "total": 12715,
+    "by_crop_age": {
+      "WHEAT": {
+        "1": 131,
+        "0": 6,
+        "2": 2
+      },
+      "CARROT": {
+        "0": 5,
+        "1": 1,
+        "2": 1
+      },
+      "TOMATO": {
+        "11": 2083,
+        "10": 1
+      },
+      "STRAWBERRY": {
+        "16": 9605,
+        "12": 347,
+        "13": 167,
+        "15": 115,
+        "10": 19,
+        "14": 188,
+        "6": 4,
+        "9": 20,
+        "1": 1,
+        "11": 10,
+        "3": 2
+      },
+      "MELON": {
+        "2": 1,
+        "1": 2,
+        "3": 1,
+        "4": 2,
+        "7": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "control_files": [
+    "a1_ctrl.json",
+    "f1_ctrl.json",
+    "f2_ctrl.json",
+    "f3_ctrl.json",
+    "jv_ctrl.json",
+    "jvc_ctrl.json",
+    "jvd_ctrl.json"
+  ],
+  "control_games": 560,
+  "fresh_games": 4,
+  "mean_banks": [
+    75433.0,
+    115290.75
+  ],
+  "opening_cash_gain_vs_buy5_game": -3.0,
+  "ordering_cash_gain_vs_inherited_sell_rank_game": 27.0
+}

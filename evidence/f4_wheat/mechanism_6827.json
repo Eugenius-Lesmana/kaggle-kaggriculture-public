@@ -1,0 +1,82 @@
+[
+  {
+    "step": 327,
+    "price": 41,
+    "market_inventory": 9748,
+    "bank": [
+      18025.0,
+      17600.0
+    ],
+    "shed_wheat": [
+      10,
+      10
+    ],
+    "issued_market": [
+      [
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          63
+        ],
+        [
+          "SELL",
+          "WHEAT",
+          63
+        ]
+      ],
+      [
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          63
+        ]
+      ]
+    ]
+  },
+  {
+    "step": 328,
+    "price": 43,
+    "market_inventory": 9685,
+    "bank": [
+      18080.0,
+      14910.0
+    ],
+    "shed_wheat": [
+      10,
+      73
+    ],
+    "issued_market": [
+      [
+        [
+          "SELL",
+          "WHEAT",
+          9
+        ]
+      ],
+      [
+        [
+          "SELL",
+          "WHEAT",
+          72
+        ]
+      ]
+    ]
+  },
+  {
+    "step": 329,
+    "price": 40,
+    "market_inventory": 9763,
+    "bank": [
+      18463.0,
+      17895.0
+    ],
+    "shed_wheat": [
+      1,
+      1
+    ],
+    "issued_market": [
+      [],
+      []
+    ]
+  }
+]

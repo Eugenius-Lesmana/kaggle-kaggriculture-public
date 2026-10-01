@@ -1,0 +1,6 @@
+* text=auto
+# The agent files are byte-addressed (sha256 is quoted in the docs). Never rewrite line endings.
+agent/main.py -text
+agent/lineage/*.diff -text
+next-agent/planner/main.py -text
+*.gz binary

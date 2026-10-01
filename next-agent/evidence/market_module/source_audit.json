@@ -1,0 +1,68 @@
+[
+  {
+    "source": "metav4",
+    "path": "agents/ours/h1-substrate-metav4/main.py",
+    "sha256": "9d63494603f88219857a3101d7dc19cc750ded04e5886732ee428580326967d9",
+    "opening_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        20
+      ],
+      [
+        "SELL",
+        "WHEAT",
+        15
+      ]
+    ],
+    "modelpx_hours": [],
+    "modelpx_apply": null
+  },
+  {
+    "source": "f4",
+    "path": "agents/ours/h1-substrate-f4/main.py",
+    "sha256": "55be5d5f124c8daaaa63c1a29ba4aab096004909666f04748007603c67b7d2a8",
+    "opening_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        8
+      ],
+      [
+        "SELL",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "WHEAT",
+        1
+      ]
+    ],
+    "modelpx_hours": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "modelpx_apply": "_s804_apply"
+  }
+]

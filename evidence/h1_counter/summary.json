@@ -1,0 +1,168 @@
+{
+  "seeds": "6301-6360",
+  "seats": 2,
+  "rows": [
+    {
+      "opponent": "cloning",
+      "counter_wlt": [
+        120,
+        0,
+        0
+      ],
+      "substrate_wlt": [
+        120,
+        0,
+        0
+      ],
+      "wins_gained": 0,
+      "wins_lost": 0,
+      "identical_games": 120,
+      "counter_mean_lead": 5392.0,
+      "substrate_mean_lead": 5392.0
+    },
+    {
+      "opponent": "farm_2945",
+      "counter_wlt": [
+        115,
+        5,
+        0
+      ],
+      "substrate_wlt": [
+        115,
+        5,
+        0
+      ],
+      "wins_gained": 0,
+      "wins_lost": 0,
+      "identical_games": 19,
+      "counter_mean_lead": 1333.5,
+      "substrate_mean_lead": 1364.5
+    },
+    {
+      "opponent": "farming_score",
+      "counter_wlt": [
+        119,
+        1,
+        0
+      ],
+      "substrate_wlt": [
+        119,
+        1,
+        0
+      ],
+      "wins_gained": 0,
+      "wins_lost": 0,
+      "identical_games": 120,
+      "counter_mean_lead": 4858.1,
+      "substrate_mean_lead": 4858.1
+    },
+    {
+      "opponent": "metav4",
+      "counter_wlt": [
+        116,
+        4,
+        0
+      ],
+      "substrate_wlt": [
+        6,
+        6,
+        108
+      ],
+      "wins_gained": 110,
+      "wins_lost": 0,
+      "identical_games": 6,
+      "counter_mean_lead": 160.2,
+      "substrate_mean_lead": 0.0
+    },
+    {
+      "opponent": "more_wheat",
+      "counter_wlt": [
+        115,
+        5,
+        0
+      ],
+      "substrate_wlt": [
+        115,
+        5,
+        0
+      ],
+      "wins_gained": 0,
+      "wins_lost": 0,
+      "identical_games": 114,
+      "counter_mean_lead": 1302.0,
+      "substrate_mean_lead": 1303.9
+    },
+    {
+      "opponent": "smaller_shock",
+      "counter_wlt": [
+        115,
+        5,
+        0
+      ],
+      "substrate_wlt": [
+        115,
+        5,
+        0
+      ],
+      "wins_gained": 0,
+      "wins_lost": 0,
+      "identical_games": 116,
+      "counter_mean_lead": 1341.7,
+      "substrate_mean_lead": 1341.5
+    },
+    {
+      "opponent": "two_coins",
+      "counter_wlt": [
+        120,
+        0,
+        0
+      ],
+      "substrate_wlt": [
+        120,
+        0,
+        0
+      ],
+      "wins_gained": 0,
+      "wins_lost": 0,
+      "identical_games": 120,
+      "counter_mean_lead": 8307.9,
+      "substrate_mean_lead": 8307.9
+    },
+    {
+      "opponent": "v46",
+      "counter_wlt": [
+        118,
+        2,
+        0
+      ],
+      "substrate_wlt": [
+        118,
+        2,
+        0
+      ],
+      "wins_gained": 0,
+      "wins_lost": 0,
+      "identical_games": 114,
+      "counter_mean_lead": 3681.6,
+      "substrate_mean_lead": 3681.8
+    },
+    {
+      "opponent": "wonderful_life",
+      "counter_wlt": [
+        115,
+        5,
+        0
+      ],
+      "substrate_wlt": [
+        115,
+        5,
+        0
+      ],
+      "wins_gained": 0,
+      "wins_lost": 0,
+      "identical_games": 116,
+      "counter_mean_lead": 1330.1,
+      "substrate_mean_lead": 1330.0
+    }
+  ]
+}

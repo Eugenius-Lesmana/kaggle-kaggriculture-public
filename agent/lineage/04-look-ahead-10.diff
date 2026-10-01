@@ -1,0 +1,13 @@
+diff --git a/main.py b/main.py   # + wheat round-trip  ->  + look-ahead 10
+index dab33df..a4e04fc 100644
+--- a/main.py
++++ b/main.py
+@@ -8184,7 +8184,7 @@ kaggle_submission_agent=step806_hour1_quote20_peer_supported_modelpx_agent
+ # Only SELL quantities already present in the native future tape are moved earlier when current public quote >=50;
+ # existing reservation debts, current buys, pickups, stock bounds, and dawn close are respected.
+ _S809_PARENT=step806_hour1_quote20_peer_supported_modelpx_agent
+-_S809_LOOK=3
++_S809_LOOK=10
+ _S809_REPORT=dict(calls=0,changed=0,units=0,errors=0)
+ def _s809_future(player,t):
+     native=_IMPL.chassis.players.get(player)

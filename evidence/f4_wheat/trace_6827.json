@@ -1,0 +1,943 @@
+[
+  {
+    "step": 250,
+    "quote": 39,
+    "inventory": 9797,
+    "shed_wheat": 46,
+    "bank": 1834.0,
+    "route": 103,
+    "tape_market": [
+      [
+        "SELL",
+        "MELON",
+        24
+      ],
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        5
+      ],
+      [
+        "SELL",
+        "FERTILIZER",
+        5
+      ]
+    ],
+    "issued_market": [
+      [
+        "SELL",
+        "MELON",
+        24
+      ],
+      [
+        "SELL",
+        "FERTILIZER",
+        5
+      ],
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        5
+      ]
+    ],
+    "rival_market": [
+      [
+        "SELL",
+        "MELON",
+        24
+      ],
+      [
+        "SELL",
+        "FERTILIZER",
+        5
+      ],
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        5
+      ]
+    ],
+    "changes": [
+      {
+        "layer": "act",
+        "line": 460,
+        "wheat": [
+          [
+            1,
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              5
+            ]
+          ]
+        ]
+      },
+      {
+        "layer": "agent",
+        "line": 1516,
+        "wheat": [
+          [
+            2,
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              5
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "step": 252,
+    "quote": 40,
+    "inventory": 9787,
+    "shed_wheat": 48,
+    "bank": 10403.0,
+    "route": 103,
+    "tape_market": [
+      [
+        "SELL",
+        "MELON",
+        6
+      ],
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        5
+      ]
+    ],
+    "issued_market": [
+      [
+        "SELL",
+        "MELON",
+        6
+      ],
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        5
+      ]
+    ],
+    "rival_market": [
+      [
+        "SELL",
+        "MELON",
+        6
+      ],
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        5
+      ]
+    ],
+    "changes": [
+      {
+        "layer": "act",
+        "line": 460,
+        "wheat": [
+          [
+            1,
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              5
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "step": 254,
+    "quote": 40,
+    "inventory": 9775,
+    "shed_wheat": 52,
+    "bank": 12352.0,
+    "route": 103,
+    "tape_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        5
+      ],
+      [
+        "BUY_SEED",
+        "WHEAT",
+        1
+      ]
+    ],
+    "issued_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        5
+      ],
+      [
+        "BUY_SEED",
+        "WHEAT",
+        1
+      ]
+    ],
+    "rival_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        5
+      ],
+      [
+        "BUY_SEED",
+        "WHEAT",
+        1
+      ]
+    ],
+    "changes": [
+      {
+        "layer": "act",
+        "line": 460,
+        "wheat": [
+          [
+            0,
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              5
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "step": 256,
+    "quote": 40,
+    "inventory": 9765,
+    "shed_wheat": 55,
+    "bank": 12998.0,
+    "route": 103,
+    "tape_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        5
+      ]
+    ],
+    "issued_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        5
+      ]
+    ],
+    "rival_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        5
+      ]
+    ],
+    "changes": [
+      {
+        "layer": "act",
+        "line": 460,
+        "wheat": [
+          [
+            0,
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              5
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "step": 257,
+    "quote": 41,
+    "inventory": 9753,
+    "shed_wheat": 60,
+    "bank": 12796.0,
+    "route": 103,
+    "tape_market": [],
+    "issued_market": [
+      [
+        "SELL",
+        "MILK",
+        3
+      ],
+      [
+        "SELL",
+        "WHEAT",
+        3
+      ]
+    ],
+    "rival_market": [
+      [
+        "SELL",
+        "MILK",
+        3
+      ],
+      [
+        "SELL",
+        "WHEAT",
+        3
+      ]
+    ],
+    "changes": [
+      {
+        "layer": "act",
+        "line": 460,
+        "wheat": []
+      },
+      {
+        "layer": "agent",
+        "line": 1726,
+        "wheat": [
+          [
+            0,
+            [
+              "SELL",
+              "WHEAT",
+              3
+            ]
+          ]
+        ]
+      },
+      {
+        "layer": "agent",
+        "line": 3016,
+        "wheat": [
+          [
+            1,
+            [
+              "SELL",
+              "WHEAT",
+              3
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "step": 259,
+    "quote": 41,
+    "inventory": 9759,
+    "shed_wheat": 57,
+    "bank": 14226.0,
+    "route": 103,
+    "tape_market": [
+      [
+        "BUY_SEED",
+        "WHEAT",
+        1
+      ]
+    ],
+    "issued_market": [
+      [
+        "SELL",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "WHEAT",
+        1
+      ]
+    ],
+    "rival_market": [
+      [
+        "SELL",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "WHEAT",
+        1
+      ]
+    ],
+    "changes": [
+      {
+        "layer": "act",
+        "line": 460,
+        "wheat": [
+          [
+            1,
+            [
+              "SELL",
+              "WHEAT",
+              3
+            ]
+          ]
+        ]
+      },
+      {
+        "layer": "agent",
+        "line": 1516,
+        "wheat": [
+          [
+            0,
+            [
+              "SELL",
+              "WHEAT",
+              3
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "step": 266,
+    "quote": 40,
+    "inventory": 9760,
+    "shed_wheat": 54,
+    "bank": 14207.0,
+    "route": 103,
+    "tape_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "STRAWBERRY",
+        1
+      ],
+      [
+        "SELL",
+        "MILK",
+        3
+      ]
+    ],
+    "issued_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "STRAWBERRY",
+        1
+      ]
+    ],
+    "rival_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "STRAWBERRY",
+        1
+      ]
+    ],
+    "changes": [
+      {
+        "layer": "act",
+        "line": 460,
+        "wheat": [
+          [
+            0,
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              3
+            ]
+          ]
+        ]
+      },
+      {
+        "layer": "agent",
+        "line": 1516,
+        "wheat": [
+          [
+            1,
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              3
+            ]
+          ]
+        ]
+      },
+      {
+        "layer": "step730_queue_compact_agent",
+        "line": 7352,
+        "wheat": [
+          [
+            0,
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              3
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "step": 268,
+    "quote": 41,
+    "inventory": 9754,
+    "shed_wheat": 46,
+    "bank": 13984.0,
+    "route": 103,
+    "tape_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "STRAWBERRY",
+        2
+      ]
+    ],
+    "issued_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "STRAWBERRY",
+        2
+      ]
+    ],
+    "rival_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "STRAWBERRY",
+        2
+      ]
+    ],
+    "changes": [
+      {
+        "layer": "act",
+        "line": 460,
+        "wheat": [
+          [
+            0,
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              3
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "step": 270,
+    "quote": 41,
+    "inventory": 9746,
+    "shed_wheat": 49,
+    "bank": 13561.0,
+    "route": 103,
+    "tape_market": [
+      [
+        "SELL",
+        "MILK",
+        6
+      ],
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "STRAWBERRY",
+        1
+      ]
+    ],
+    "issued_market": [
+      [
+        "SELL",
+        "MILK",
+        6
+      ],
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "STRAWBERRY",
+        1
+      ]
+    ],
+    "rival_market": [
+      [
+        "SELL",
+        "MILK",
+        6
+      ],
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "STRAWBERRY",
+        1
+      ]
+    ],
+    "changes": [
+      {
+        "layer": "act",
+        "line": 460,
+        "wheat": [
+          [
+            1,
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              3
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "step": 272,
+    "quote": 41,
+    "inventory": 9740,
+    "shed_wheat": 50,
+    "bank": 13581.0,
+    "route": 103,
+    "tape_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "STRAWBERRY",
+        1
+      ]
+    ],
+    "issued_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "STRAWBERRY",
+        1
+      ]
+    ],
+    "rival_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "STRAWBERRY",
+        1
+      ]
+    ],
+    "changes": [
+      {
+        "layer": "act",
+        "line": 460,
+        "wheat": [
+          [
+            0,
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              3
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "step": 274,
+    "quote": 41,
+    "inventory": 9732,
+    "shed_wheat": 53,
+    "bank": 13258.0,
+    "route": 103,
+    "tape_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "STRAWBERRY",
+        1
+      ],
+      [
+        "BUY_SEED",
+        "WHEAT",
+        1
+      ]
+    ],
+    "issued_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "STRAWBERRY",
+        1
+      ],
+      [
+        "BUY_SEED",
+        "WHEAT",
+        1
+      ]
+    ],
+    "rival_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "STRAWBERRY",
+        1
+      ],
+      [
+        "BUY_SEED",
+        "WHEAT",
+        1
+      ]
+    ],
+    "changes": [
+      {
+        "layer": "act",
+        "line": 460,
+        "wheat": [
+          [
+            0,
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              3
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "step": 276,
+    "quote": 42,
+    "inventory": 9726,
+    "shed_wheat": 56,
+    "bank": 13024.0,
+    "route": 103,
+    "tape_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "WHEAT",
+        2
+      ]
+    ],
+    "issued_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "WHEAT",
+        2
+      ]
+    ],
+    "rival_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        3
+      ],
+      [
+        "BUY_SEED",
+        "WHEAT",
+        2
+      ]
+    ],
+    "changes": [
+      {
+        "layer": "act",
+        "line": 460,
+        "wheat": [
+          [
+            0,
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              3
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "step": 327,
+    "quote": 41,
+    "inventory": 9748,
+    "shed_wheat": 10,
+    "bank": 17823.0,
+    "route": 103,
+    "tape_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        63
+      ]
+    ],
+    "issued_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        63
+      ]
+    ],
+    "rival_market": [
+      [
+        "BUY_PRODUCT",
+        "WHEAT",
+        63
+      ]
+    ],
+    "changes": [
+      {
+        "layer": "act",
+        "line": 460,
+        "wheat": [
+          [
+            0,
+            [
+              "BUY_PRODUCT",
+              "WHEAT",
+              63
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "step": 328,
+    "quote": 44,
+    "inventory": 9622,
+    "shed_wheat": 73,
+    "bank": 15133.0,
+    "route": 103,
+    "tape_market": [],
+    "issued_market": [
+      [
+        "SELL",
+        "WHEAT",
+        72
+      ]
+    ],
+    "rival_market": [
+      [
+        "SELL",
+        "WHEAT",
+        72
+      ]
+    ],
+    "changes": [
+      {
+        "layer": "act",
+        "line": 460,
+        "wheat": []
+      },
+      {
+        "layer": "agent",
+        "line": 1726,
+        "wheat": [
+          [
+            0,
+            [
+              "SELL",
+              "WHEAT",
+              72
+            ]
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "step": 329,
+    "quote": 40,
+    "inventory": 9763,
+    "shed_wheat": 1,
+    "bank": 18189.0,
+    "route": 103,
+    "tape_market": [
+      [
+        "SELL",
+        "WHEAT",
+        63
+      ]
+    ],
+    "issued_market": [],
+    "rival_market": [],
+    "changes": [
+      {
+        "layer": "act",
+        "line": 460,
+        "wheat": [
+          [
+            0,
+            [
+              "SELL",
+              "WHEAT",
+              0
+            ]
+          ]
+        ]
+      },
+      {
+        "layer": "agent",
+        "line": 1516,
+        "wheat": []
+      }
+    ]
+  }
+]

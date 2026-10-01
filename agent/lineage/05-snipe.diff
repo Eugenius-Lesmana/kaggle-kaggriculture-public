@@ -1,0 +1,36 @@
+diff --git a/main.py b/main.py   # + look-ahead 10  ->  + snipe (final agent)
+index a4e04fc..c2655bd 100644
+--- a/main.py
++++ b/main.py
+@@ -1830,11 +1830,11 @@ def _r37_reorder_sales(observation, action):
+     orders = [list(o) for o in action['market']]
+     start = 0
+     while start < len(orders):
+-        if orders[start][0] != 'SELL':
++        if not orders[start] or orders[start][0] != 'SELL':
+             start += 1
+             continue
+         end = start
+-        while end < len(orders) and orders[end][0] == 'SELL':
++        while end < len(orders) and orders[end] and orders[end][0] == 'SELL':
+             end += 1
+         block = orders[start:end]
+         if len({o[1] for o in block}) == len(block):
+@@ -4472,7 +4472,7 @@ agent = globals().pop('agent')
+ # ---------------------------------------------------------------------------
+ _CA_FROM = 6
+ _CA_TO = 28
+-_CA_MARGIN = -15.0
++_CA_MARGIN = -22.0
+ _CA_DROP = 0.0
+ _CA_BUFFER = 8
+ _CA_FEED_DAYS = 1
+@@ -4728,7 +4728,7 @@ agent = globals().pop('agent')
+ # Built by tools/claude_build_orderpri2.py (derivation there).
+ # ---------------------------------------------------------------------------
+ _OR2_CAP = 30
+-_OR2_SN_K = 0
++_OR2_SN_K = 1
+ _OR2_SN_H = 24
+ _OR2_SLOT_H = 6
+ _OR2_SLOT_MARGIN = 8.0
