@@ -109,6 +109,13 @@ structural: the top agents' whole season is optimised as one piece, offline.
 
 The plan is to do the same for our own farm: search for a whole-season plan automatically, with real games as
 the judge, and keep the planner as the fallback when a game drifts from the plan. That is unfinished.
+
+**Update, 2026-10-11.** Since 2 October we have also been building a second attempt, the template agent: a farm
+rebuilt from public replays of one reference team and then improved by measurement. It reaches **0.89 of
+Metav4's bank** against a target of 0.9, so it is not finished either. Its code will be published after the
+competition's grading ends. The progress note, with a table of versions, is
+[`next-agent/docs/TEMPLATE_PROGRESS_2026-10-11.md`](next-agent/docs/TEMPLATE_PROGRESS_2026-10-11.md).
+
 See [`next-agent/`](next-agent/).
 
 ## Repository map

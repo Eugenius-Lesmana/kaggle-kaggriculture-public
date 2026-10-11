@@ -4,10 +4,27 @@ We are building a second agent that is **not** a fork of the Metav4 / F1 / F4 ta
 informed by what the top teams do. **We did not finish it before the deadline.** It is still being worked on.
 This folder is the honest state of that work: what exists, what we measured, and what is missing.
 
-> **Current level:** in paired games against Metav4, our planner ends with about **0.70 of Metav4's bank**
-> (about $82k against $117k, 560 games). It does not beat the agents in [`agent/`](../agent/).
+> **Current level (2026-10-11):** two attempts, neither finished.
+> - **Planner:** about **0.70 of Metav4's bank** in paired games (about $82k against $117k, 560 games).
+> - **Template agent:** **0.89 of Metav4's bank** (about $90k against $102k, 24 games, confirmed in four
+>   other setups). The target is 0.9. Its code is not published yet.
+>
+> Neither beats the agents in [`agent/`](../agent/).
 
-## What exists
+## Timeline
+
+| Dates | What happened | Level against Metav4 | Read |
+|---|---|---:|---|
+| 7 Sept onward | Our own adaptive planner, built up to v0.11 | 0.70 | This page |
+| 25 Sept to 1 Oct | About 22 single changes to the planner, most copied from top teams: one small gain, the rest level or worse | 0.70 | [`EXPERIMENT_LOG`](docs/EXPERIMENT_LOG.md) |
+| 2 to 6 Oct | New start: the template agent, a farm rebuilt from public replays of one reference team | 0.52, then 0.79 | [`TEMPLATE_PROGRESS`](docs/TEMPLATE_PROGRESS_2026-10-11.md) |
+| 7 to 10 Oct | Template agent improved by measurement: five confirmed changes, eight dropped | 0.89 | [`TEMPLATE_PROGRESS`](docs/TEMPLATE_PROGRESS_2026-10-11.md) |
+| 11 Oct | Paused until the competition's grading ends | 0.89 | [`TEMPLATE_PROGRESS`](docs/TEMPLATE_PROGRESS_2026-10-11.md) |
+
+The rest of this page describes the planner. The template agent has its own note, with a table of its
+versions. Its code and the study of the reference team will be added after grading ends.
+
+## The planner: what exists
 
 [`planner/main.py`](planner/main.py) (v0.11 research candidate) is a single-file adaptive planner, built up
 since 7 September. It is the planner of record for every experiment below. Every research switch is **off by
@@ -25,7 +42,7 @@ default**. In that state it plays exactly as our v0.10.
   (`JOB_VALUES_LEARNED`: decision trees trained on about 2 million top-agent worker turns), zone sweeps,
   late hires, and a market module (`MARKET_MODULE`).
 
-## What we found
+## The planner: what we found
 
 1. **Execution is not the limit.** On our own farm, almost every job that falls due is done and walking time
    (36–47%) matches the top teams'. What differs is that our workers are **idle early**: 52% of worker time on
@@ -65,6 +82,7 @@ current state.
 |---|---|
 | [`planner/`](planner/) | The v0.11 planner and its flag list. |
 | [`docs/`](docs/) | Dated notes: [`EXPERIMENT_LOG`](docs/EXPERIMENT_LOG.md) (start here), and the notes behind each result. |
+| [`docs/TEMPLATE_PROGRESS_2026-10-11.md`](docs/TEMPLATE_PROGRESS_2026-10-11.md) | The template agent: versions, what worked, what did not, what is missing. |
 | [`evidence/routeopt/`](evidence/routeopt/) | Result files for the paired experiments, `diag.py` (full-game diagnostic), `paired.py`. |
 | [`evidence/`](evidence/) | Also: executor prototype, learned job values, capacity module, market module. |
 | [`ROADMAP.md`](ROADMAP.md) | What is next, in order, with the measurement that decides each step. |
