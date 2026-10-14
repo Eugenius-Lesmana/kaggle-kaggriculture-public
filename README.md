@@ -12,6 +12,27 @@ leaderboard and the top teams, and an unfinished second agent.
 Everything here is a dated lab record. Numbers come from local games against a fixed opponent panel, or from
 replays of public ladder games. Where a result did not hold up on the live ladder, we say so below.
 
+## At a glance
+
+**The task.** Kaggriculture is a two-player farming simulation on Kaggle: plant, raise animals, sell into
+markets both players share, and finish a 30-day season with more money than the opponent. Each entry is an
+agent that plays every turn.
+
+**What we found first.** A census of 139 mid-ladder replays from 137 teams showed that about **80% of the
+ladder ran forks of one public scripted agent** (Metav4 and its successors), and none ran an exact public copy.
+We also built a replay inspector to study games turn by turn (see [below](#the-replay-inspector)).
+
+**Two lines of work followed.**
+
+| Line | What it is | Headline result |
+|---|---|---|
+| Optimise the script | Small layers on the public F4 script that change how and when it sells | Our counter layer won **70 of 80** games against the unmodified script (70–4–6). The final agent was submitted. |
+| Our own adaptive agent | An agent that decides from the game state each turn instead of replaying fixed moves | **0.892 of Metav4's final bank** on 24 paired seeds, reached on 10 October, after the deadline. Not submitted. |
+
+**How it was judged.** Every change to the script was a paired test: the same seeds, played from both seats,
+80 games, with a repeat on fresh seeds before a layer was kept. One change won **66–14** locally yet rated lower on the live ladder.
+Details in [How we tested](#how-we-tested).
+
 ## The game
 
 Two players farm for a 30-day season (720 steps, 24 per day) and sell into **shared markets**. Whoever holds more
@@ -47,20 +68,80 @@ The base F4 agent, and everything it builds on, belongs to its public authors. S
 
 ### Local results
 
-Paired seeds, both seats, 80 games per cell, fresh seeds for each confirmation. Wins–losses(–ties) for the
-newer agent in each row.
-
-| Step | Compared with | Result | Evidence |
-|---|---|---|---|
-| Counter on F4 | F4 mirror | 70–4–6 | [`evidence/f4_screen`](evidence/f4_screen/) |
-| + race + wheat | F4 + counter | 66–14 | [`evidence/f4_race`](evidence/f4_race/) |
-| + look-ahead 10 | race + wheat | 58–18–4, then 66–12 on a second seed set | [`evidence/f4_race`](evidence/f4_race/) |
-| + snipe (**final**) | look-ahead 10 | 60–18–2 | [`evidence/final_snipe`](evidence/final_snipe/) |
-| Final | the public snipe notebook | 77–3 | [`evidence/final_snipe`](evidence/final_snipe/) |
-| Final, guards | F4 + counter / F1 / F2 / Metav4 | 62–18 / 70–10 / 66–14 / 67–13 | [`evidence/final_snipe`](evidence/final_snipe/) |
+Each layer's paired result against the one before it is in [How we tested](#how-we-tested). Guards for the
+final agent: 62–18 against F4 + counter, 70–10 against F1, 66–14 against F2, 67–13 against Metav4
+([`evidence/final_snipe`](evidence/final_snipe/)).
 
 One result went the other way: the public snipe notebook **beat look-ahead 10, 46–34** (seeds 8201–8240).
 That is why the snipe lines are in the final agent.
+
+## How we tested
+
+Every change to the script was an A/B test against the version before it.
+
+- **Paired seeds.** Both agents play the same 40 game seeds, so shops, weather and weeds are identical. The
+  comparison is game by game, which removes much of the luck.
+- **Both seats.** Each seed is played twice, once from each side of the board: 80 games per comparison.
+- **Fresh-seed confirmation.** The method was to repeat a result on an unused seed range before keeping it.
+  The table shows where that repeat is in the published evidence; for two layers it is not.
+- **Our bank and the opponent's.** Markets are shared, so a change can win by lowering the opponent's income.
+  We report both.
+- **Keep rule.** Keep a layer if it beats its predecessor on the first seed set and repeats on fresh seeds,
+  and check it against guard opponents (F1, F2, Metav4, the previous version). No p-values were computed;
+  results are reported as wins–losses–ties.
+
+Each layer against its baseline (W–L–T for the newer agent; every row is 80 games, 40 seeds, both seats):
+
+| Layer | Baseline | Seeds | W–L–T | Confirmation on fresh seeds | Evidence |
+|---|---|---|---|---|---|
+| Counter on F4 | unmodified F4 | 6481–6520 | **70–4–6** | not in the published evidence | [`f4_screen/cF4_vs_F4.json`](evidence/f4_screen/cF4_vs_F4.json) |
+| Race + wheat round-trip | F4 + counter | 6881–6920 | **66–14** | 69–5–6 (6961–7000); 62–16–2 (7001–7040) | [note](analysis/leaderboard/F4_RACE_2026-09-29.md), [`f4_race/`](evidence/f4_race/) |
+| Look-ahead 10 | race + wheat | 7001–7040 | **58–18–4** | 66–12–2 (6921–6960) | [`f4_race/`](evidence/f4_race/) |
+| Snipe (final) | look-ahead 10 | 8241–8280 | **60–18–2** | not in the published evidence | [`final_snipe/`](evidence/final_snipe/) |
+| Final agent | the public snipe notebook | 8201–8240 | **77–3–0** | — | [`final_snipe/`](evidence/final_snipe/) |
+
+The raw game file behind the 66–14 row is not published; the figure comes from the dated note linked in that
+row. The two confirmations are published game files.
+
+**Local wins did not guarantee ladder gains.** Race + wheat beat F4 + counter **66–14** locally, but on the
+live ladder it was rated about **1,898 over 231 games**, below F4 + counter's **about 2,200 over
+153 games**. These are two separate submissions rated against a changing field, so this is not a controlled
+comparison. Our reading is that a fixed local panel did not represent a ladder of forks that each differ in
+some way; we have not verified the cause.
+
+The adaptive agent below was tested differently: 24 paired seeds from one seat against Metav4, reported as a
+mean difference with its standard error, then repeated in four other setups (seats swapped, two other
+opponents, fresh seeds).
+
+## The replay inspector
+
+A local web app for studying games turn by turn. It runs matches on the real game engine, opens recorded
+replays, and lets us ask two agent versions what they would do from the same moment of a game.
+
+![Replay view: farm board, the actions resolved this turn, and the bank trajectory of both players](docs/images/inspector-replay.png)
+
+**Replay view.** A turn scrubber over the 720 turns, the farm board of either player, the actions resolved
+into this turn and issued for the next, market prices, and both players' bank over the season. We used it to
+follow top teams' games step by step: where each worker went, when they sold, and when the bank moved.
+
+![Counterfactual: two agent versions continue from the same state against the same recorded opponent](docs/images/inspector-counterfactual.png)
+
+**Counterfactual comparison.** Two versions of an agent start from the same selected state of a game and
+play on against the same recorded opponent, side by side. We used it to see where a change altered decisions,
+without the noise of a whole new game.
+
+![Fair matchup: repeated identical seeds with the players' sides swapped](docs/images/inspector-fair-matchup.png)
+
+**Fair matchup.** Plays two agents on repeated identical seeds and swaps their sides, the same design as our
+paired tests, at a small scale. A human-player sandbox sits beside it. (The screenshot shows the setup
+form; we did not re-run this feature for this write-up.)
+
+The census above was **not** done with the inspector: it used separate scripts that match each player's
+moves against public agents, step by step. Those are described in
+[`analysis/leaderboard/LEADERBOARD_CENSUS_2026-09-26.md`](analysis/leaderboard/LEADERBOARD_CENSUS_2026-09-26.md).
+
+**The inspector's code is not in this repository.** It bundles third-party public agents for its matches and
+would need those removed first. It was built with AI assistance (see Credits).
 
 ### What happened on the live ladder
 
@@ -110,13 +191,31 @@ structural: the top agents' whole season is optimised as one piece, offline.
 The plan is to do the same for our own farm: search for a whole-season plan automatically, with real games as
 the judge, and keep the planner as the fallback when a game drifts from the plan. That is unfinished.
 
-**Update, 2026-10-11.** Since 2 October we have also been building a second attempt, the template agent: a farm
-rebuilt from public replays of one reference team and then improved by measurement. It reaches **0.89 of
-Metav4's bank** against a target of 0.9, so it is not finished either. Its code will be published after the
-competition's grading ends. The progress note, with a table of versions, is
-[`next-agent/docs/TEMPLATE_PROGRESS_2026-10-11.md`](next-agent/docs/TEMPLATE_PROGRESS_2026-10-11.md).
-
 See [`next-agent/`](next-agent/).
+
+## Our own adaptive agent
+
+The **template agent** is our second attempt at an agent of our own. It does not replay fixed moves. Each
+turn it reads the farm, the shops that are open and the market prices, decides what the farm should look like,
+and assigns each worker its next job by scoring the jobs available in the current state.
+
+Its layout targets are not our own design: they were learned from **169 public replays of one top team**.
+What we added is the decision-making that carries them out, and a series of measured fixes to it.
+
+| Agent | Share of Metav4's final bank | Games |
+|---|---:|---|
+| Our planner (first attempt, a separate agent) | 0.70 | 560 paired games |
+| Template agent, first working version | 0.790 | 24 paired seeds, one seat |
+| Template agent, current version | **0.892** | 24 paired seeds, one seat |
+| Same version across five setups | 0.893 | 120 games: the 24 seeds plus seats swapped, two other opponents, fresh seeds |
+
+The 0.70 and the 0.892 belong to **two different agents**; the template agent is not a continuation of the
+planner. The target was at least 0.9, so it is not finished.
+
+It reached 0.892 on **10 October 2026, after the competition's submission deadline**, and was **never
+submitted** to the ladder, so it has no ladder rating. Its code is not published yet. The progress note, with
+every version and what did and did not work:
+[`next-agent/docs/TEMPLATE_PROGRESS_2026-10-11.md`](next-agent/docs/TEMPLATE_PROGRESS_2026-10-11.md).
 
 ## Repository map
 
@@ -145,6 +244,14 @@ Full instructions: [`tools/README.md`](tools/README.md). Games take about 10–3
 - A few large derived tables (over 1 MB). They are listed in
   [`evidence/README.md`](evidence/README.md#files-not-included).
 - Our earlier agents (v0.1–v0.10) and the replay inspector. They stay in our working repository.
+
+## Team
+
+Two people. **Eugenius Lesmana** (this repository's owner) made 214 of the 226 commits in our working
+repository. He built the replay inspector, ran the ladder census and the top-team studies, designed the
+counter and the sale-timing layers, set up the paired-testing method, and built the planner and the template
+agent. The other team member contributed to the simulation lab, the tests and an early strategy branch.
+Commit counts show who committed, not who wrote each line; see the AI-assistance note below.
 
 ## Credits and licence
 
