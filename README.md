@@ -27,7 +27,7 @@ We also built a replay inspector to study games turn by turn (see [below](#the-r
 | Line | What it is | Headline result |
 |---|---|---|
 | Optimise the script | Small layers on the public F4 script that change how and when it sells | Our counter layer won **70 of 80** games against the unmodified script (70–4–6). The final agent was submitted. |
-| Our own adaptive agent | An agent that decides from the game state each turn instead of replaying fixed moves | **0.892 of Metav4's final bank** on 24 paired seeds, reached on 10 October, after the deadline. Not submitted. |
+| Our own adaptive agent | An agent that decides from the game state each turn instead of replaying fixed moves | **0.913 of Metav4's final bank** on 24 paired seeds (0.896–0.919 across five setups), reached on 15 October, after the deadline. Not submitted. |
 
 **How it was judged.** Every change to the script was a paired test: the same seeds, played from both seats,
 80 games, with a repeat on fresh seeds before a layer was kept. One change won **66–14** locally yet rated lower on the live ladder.
@@ -163,6 +163,12 @@ different. We have not established why.
 
 ## What the top teams do
 
+> **Correction, 2026-10-15.** The teams' own write-ups, published after the competition, show that the top
+> agents were **trained neural networks** (behaviour cloning on replays, some with self-play reinforcement
+> learning), with a few hand-written rules on top. We had read them as hand-built plans optimised offline.
+> The measurements below stand; the explanation is corrected in
+> [`LEARNED_POLICIES_2026-10-15`](analysis/top-agents/LEARNED_POLICIES_2026-10-15.md).
+
 Full write-up: [`analysis/`](analysis/). The short version:
 
 - **Their edge is units, not prices.** The top three produce about 52% more units per game than our planner
@@ -177,7 +183,8 @@ Full write-up: [`analysis/`](analysis/). The short version:
 - **There are no discrete "shop modes".** Farms cluster by season phase. Conversion mostly happens at harvest
   (60–63% of plantings follow a harvest).
 - **Routes repeat across games, not across days.** The same worker on the same day follows a recognisable
-  route in different games. That is what an offline-optimised tape looks like.
+  route in different games. We read that as an offline-optimised tape; it was a trained network making the
+  same choice from similar states (corrected 2026-10-15).
 - **A fourth top team plays differently**: heavy product trading, about 3,470 wheat units sold per game, for
   a similar final bank.
 
@@ -186,7 +193,8 @@ Full write-up: [`analysis/`](analysis/). The short version:
 Our own planner reaches about **0.70 of Metav4's bank** in paired games. We ran about 22 single changes meant
 to close the gap. One was a small gain still waiting for confirmation; the rest were neutral or negative.
 Copying the top teams' routes, plan or job priorities onto our executor did not work either. The gap is
-structural: the top agents' whole season is optimised as one piece, offline.
+structural. (We wrote here that the top agents' season was optimised as one piece, offline. Their write-ups
+show they were trained networks instead; see the correction above.)
 
 The plan is to do the same for our own farm: search for a whole-season plan automatically, with real games as
 the judge, and keep the planner as the fallback when a game drifts from the plan. That is unfinished.
@@ -206,16 +214,26 @@ What we added is the decision-making that carries them out, and a series of meas
 |---|---:|---|
 | Our planner (first attempt, a separate agent) | 0.70 | 560 paired games |
 | Template agent, first working version | 0.790 | 24 paired seeds, one seat |
-| Template agent, current version | **0.892** | 24 paired seeds, one seat |
-| Same version across five setups | 0.893 | 120 games: the 24 seeds plus seats swapped, two other opponents, fresh seeds |
+| Template agent, 10 October | 0.892 | 24 paired seeds, one seat |
+| Template agent, current version (end-of-day fix, 15 October) | **0.913** | 24 paired seeds, one seat |
+| Same version, other setups | 0.916 / 0.919 / 0.918 / 0.896 | seats swapped / against F1 / against F4 / fresh seeds, 24 games each |
 
-The 0.70 and the 0.892 belong to **two different agents**; the template agent is not a continuation of the
-planner. The target was at least 0.9, so it is not finished.
+The 0.70 and the 0.913 belong to **two different agents**; the template agent is not a continuation of the
+planner. The target was at least 0.9: met in four of five setups, but the agent still does not beat Metav4
+(2 of 24 standard games won).
 
-It reached 0.892 on **10 October 2026, after the competition's submission deadline**, and was **never
-submitted** to the ladder, so it has no ladder rating. Its code is not published yet. The progress note, with
-every version and what did and did not work:
-[`next-agent/docs/TEMPLATE_PROGRESS_2026-10-11.md`](next-agent/docs/TEMPLATE_PROGRESS_2026-10-11.md).
+All of this came **after the competition's submission deadline**; the template agent was **never submitted** to
+the ladder, so it has no ladder rating. Its code is not published yet. The latest progress note, with the
+end-of-day fix, a dollar ledger of what is still missing, and what did not work:
+[`next-agent/docs/TEMPLATE_PROGRESS_2026-10-16.md`](next-agent/docs/TEMPLATE_PROGRESS_2026-10-16.md)
+(earlier: [`2026-10-11`](next-agent/docs/TEMPLATE_PROGRESS_2026-10-11.md)).
+
+### Coming next: a hybrid agent with a learned worker policy
+
+The template agent plans the farm well but cannot hand out worker time any better by hand: every fix that needed
+worker time took it from other work. The top teams' write-ups show they used trained networks. Our next agent
+keeps the rules for the plan and lets a model, learned from one top team's replays, choose each worker's next job.
+Target: beat Metav4 in all five setups. In progress; nothing measured yet.
 
 ## Repository map
 

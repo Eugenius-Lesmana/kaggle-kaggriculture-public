@@ -4,10 +4,10 @@ We are building a second agent that is **not** a fork of the Metav4 / F1 / F4 ta
 informed by what the top teams do. **We did not finish it before the deadline.** It is still being worked on.
 This folder is the honest state of that work: what exists, what we measured, and what is missing.
 
-> **Current level (2026-10-11):** two attempts, neither finished.
+> **Current level (2026-10-16):** two attempts, neither finished; a third (hybrid, with a learned worker policy) is starting.
 > - **Planner:** about **0.70 of Metav4's bank** in paired games (about $82k against $117k, 560 games).
-> - **Template agent:** **0.89 of Metav4's bank** (about $90k against $102k, 24 games, confirmed in four
->   other setups). The target is 0.9. Its code is not published yet.
+> - **Template agent:** **0.913 of Metav4's bank** (about $92k against $102k, 24 games; 0.896–0.919 in four
+>   other setups). The target was 0.9. Its code is not published yet.
 >
 > Neither beats the agents in [`agent/`](../agent/).
 
@@ -20,6 +20,8 @@ This folder is the honest state of that work: what exists, what we measured, and
 | 2 to 6 Oct | New start: the template agent, a farm rebuilt from public replays of one reference team | 0.52, then 0.79 | [`TEMPLATE_PROGRESS`](docs/TEMPLATE_PROGRESS_2026-10-11.md) |
 | 7 to 10 Oct | Template agent improved by measurement: five confirmed changes, eight dropped | 0.89 | [`TEMPLATE_PROGRESS`](docs/TEMPLATE_PROGRESS_2026-10-11.md) |
 | 11 Oct | Paused until the competition's grading ends | 0.89 | [`TEMPLATE_PROGRESS`](docs/TEMPLATE_PROGRESS_2026-10-11.md) |
+| 15 to 16 Oct | Top teams' write-ups read; end-of-day fix confirmed in five setups; animal and land fixes level | 0.913 | [`TEMPLATE_PROGRESS`](docs/TEMPLATE_PROGRESS_2026-10-16.md) |
+| from 16 Oct | Hybrid agent: rules for the plan, a learned model for worker jobs | not yet measured | — |
 
 The rest of this page describes the planner. The template agent has its own note, with a table of its
 versions. Its code and the study of the reference team will be added after grading ends.
@@ -82,7 +84,7 @@ current state.
 |---|---|
 | [`planner/`](planner/) | The v0.11 planner and its flag list. |
 | [`docs/`](docs/) | Dated notes: [`EXPERIMENT_LOG`](docs/EXPERIMENT_LOG.md) (start here), and the notes behind each result. |
-| [`docs/TEMPLATE_PROGRESS_2026-10-11.md`](docs/TEMPLATE_PROGRESS_2026-10-11.md) | The template agent: versions, what worked, what did not, what is missing. |
+| [`docs/TEMPLATE_PROGRESS_2026-10-16.md`](docs/TEMPLATE_PROGRESS_2026-10-16.md) | The template agent, latest: end-of-day fix, dollar ledger, what did not work, next steps. Earlier: [`2026-10-11`](docs/TEMPLATE_PROGRESS_2026-10-11.md). |
 | [`evidence/routeopt/`](evidence/routeopt/) | Result files for the paired experiments, `diag.py` (full-game diagnostic), `paired.py`. |
 | [`evidence/`](evidence/) | Also: executor prototype, learned job values, capacity module, market module. |
 | [`ROADMAP.md`](ROADMAP.md) | What is next, in order, with the measurement that decides each step. |

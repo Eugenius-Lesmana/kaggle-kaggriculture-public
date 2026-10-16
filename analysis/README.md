@@ -57,8 +57,14 @@ The notes use the working repository's paths.
 | [`PRODUCTION_GAP_2026-09-30`](top-agents/PRODUCTION_GAP_2026-09-30.md) | Where the top agents' extra units come from: +703 units a game, 54% from capacity and 46% from yield per occupied day. |
 | [`MARKET_EDGE_2026-09-30`](top-agents/MARKET_EDGE_2026-09-30.md) | Their edge over our planner is **units to sell, not prices**: +$41.4k from units and −$1.8k from price. A fourth top team wins on product trading. |
 | [`YIELD_DRIVERS_2026-09-30`](top-agents/YIELD_DRIVERS_2026-09-30.md) | Fertilizer timed to the yield window is the strongest measured driver of top wheat and strawberry yield. |
+| [`LEARNED_POLICIES_2026-10-15`](top-agents/LEARNED_POLICIES_2026-10-15.md) | **Correction.** The top agents were trained networks (behaviour cloning, some with self-play), per their own write-ups. |
 
 ## Corrections between notes
+
+- **"The top agents' season is optimised as one piece, offline."** Our reading in
+  [`MICROTAPE_STUDY`](top-agents/MICROTAPE_STUDY_2026-09-28.md) and
+  [`ROUTE_BACKBONES`](top-agents/ROUTE_BACKBONES_2026-09-29.md). The teams' write-ups show trained networks
+  instead ([`LEARNED_POLICIES`](top-agents/LEARNED_POLICIES_2026-10-15.md)). The measurements stand.
 
 - **"Execution gap".** The 24 and 25 September notes ([`TOP3_MACRO_PLAN`](top-agents/TOP3_MACRO_PLAN_2026-09-24.md),
   [`V010_TOP4_TRANSPLANT`](../next-agent/docs/V010_TOP4_TRANSPLANT_2026-09-25.md)) said our planner wasted worker
