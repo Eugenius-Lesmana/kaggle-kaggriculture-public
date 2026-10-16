@@ -18,8 +18,8 @@ This folder is the honest state of that work: what exists, what we measured, and
 | 7 Sept onward | Our own adaptive planner, built up to v0.11 | 0.70 | This page |
 | 25 Sept to 1 Oct | About 22 single changes to the planner, most copied from top teams: one small gain, the rest level or worse | 0.70 | [`EXPERIMENT_LOG`](docs/EXPERIMENT_LOG.md) |
 | 2 to 6 Oct | New start: the template agent, a farm rebuilt from public replays of one reference team | 0.52, then 0.79 | [`TEMPLATE_PROGRESS`](docs/TEMPLATE_PROGRESS_2026-10-11.md) |
-| 7 to 10 Oct | Template agent improved by measurement: five confirmed changes, eight dropped | 0.89 | [`TEMPLATE_PROGRESS`](docs/TEMPLATE_PROGRESS_2026-10-11.md) |
-| 11 Oct | Paused until the competition's grading ends | 0.89 | [`TEMPLATE_PROGRESS`](docs/TEMPLATE_PROGRESS_2026-10-11.md) |
+| 7 to 10 Oct | Template agent improved by measurement: five confirmed changes, eight dropped | 0.89 (then) | [`TEMPLATE_PROGRESS`](docs/TEMPLATE_PROGRESS_2026-10-11.md) |
+| 11 Oct | Paused until the competition's grading ends | 0.89 (then) | [`TEMPLATE_PROGRESS`](docs/TEMPLATE_PROGRESS_2026-10-11.md) |
 | 15 to 16 Oct | Top teams' write-ups read; end-of-day fix confirmed in five setups; animal and land fixes level | 0.913 | [`TEMPLATE_PROGRESS`](docs/TEMPLATE_PROGRESS_2026-10-16.md) |
 | from 16 Oct | Hybrid agent: rules for the plan, a learned model for worker jobs | not yet measured | — |
 

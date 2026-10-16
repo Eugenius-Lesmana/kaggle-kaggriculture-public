@@ -1,5 +1,8 @@
 # Template agent: progress on 2026-10-11
 
+> **Superseded** by [`TEMPLATE_PROGRESS_2026-10-16`](TEMPLATE_PROGRESS_2026-10-16.md): the current confirmed
+> version reaches **0.913** of Metav4's final bank. The figures below are as of 11 October.
+
 This is a progress note, not a result. The target has not been reached yet.
 
 The template agent is our attempt to rebuild a strong farm from what can be seen in public replays of
