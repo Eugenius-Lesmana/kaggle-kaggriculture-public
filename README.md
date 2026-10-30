@@ -8,6 +8,7 @@ leaderboard and the top teams, and an unfinished second agent.
 | Final agent: F4 + counter + race + wheat round-trip + look-ahead 10 + snipe | **Finished, submitted** | [`agent/`](agent/) |
 | Leaderboard and top-agent analysis | **Finished** | [`analysis/`](analysis/) |
 | A new agent: our own planner, built from what the top teams do | **Unfinished.** We ran out of time. Work continues. | [`next-agent/`](next-agent/) |
+| ML agent: template rules plus a transformer trained by imitating the 4th-place agent | **Finished** (after the deadline): 0.913 of the 5th-place agent's bank | [`ml-agent/`](ml-agent/) |
 
 Everything here is a dated lab record. Numbers come from local games against a fixed opponent panel, or from
 replays of public ladder games. Where a result did not hold up on the live ladder, we say so below.
@@ -223,17 +224,20 @@ planner. The target was at least 0.9: met in four of five setups, but the agent 
 (2 of 24 standard games won).
 
 All of this came **after the competition's submission deadline**; the template agent was **never submitted** to
-the ladder, so it has no ladder rating. Its code is not published yet. The latest progress note, with the
+the ladder, so it has no ladder rating. Its code is published with the ML agent, in
+[`ml-agent/vendor/template_agent/`](ml-agent/vendor/template_agent/). The latest progress note, with the
 end-of-day fix, a dollar ledger of what is still missing, and what did not work:
 [`next-agent/docs/TEMPLATE_PROGRESS_2026-10-16.md`](next-agent/docs/TEMPLATE_PROGRESS_2026-10-16.md)
 (earlier: [`2026-10-11`](next-agent/docs/TEMPLATE_PROGRESS_2026-10-11.md)).
 
-### Coming next: a hybrid agent with a learned worker policy
+### Next: a hybrid agent with a learned worker policy (finished, see `ml-agent/`)
 
 The template agent plans the farm well but cannot hand out worker time any better by hand: every fix that needed
-worker time took it from other work. The top teams' write-ups show they used trained networks. Our next agent
-keeps the rules for the plan and lets a model, learned from one top team's replays, choose each worker's next job.
-Target: beat Metav4 in all five setups. In progress; nothing measured yet.
+worker time took it from other work. The top teams' write-ups show they used trained networks. Our hybrid agent
+keeps the template for the opening and the last day, and lets a transformer, trained by imitating the 4th-place
+agent and corrected in five rounds, run the workers and the market on days 6-28. Against the 5th-place agent it
+reaches **0.913 of its bank** over 78 games (the template alone: 0.695). Write-up, code and design notes:
+[`ml-agent/`](ml-agent/).
 
 ## Repository map
 
@@ -243,6 +247,7 @@ analysis/     leaderboard census, ladder diagnosis, top-agent studies (dated lab
 evidence/     result files behind the analysis (per-game rows, summary tables, scripts)
 tools/        game screen, replay fetcher, opponent classifier
 next-agent/   unfinished planner, its experiment log and roadmap
+ml-agent/     hybrid agent: template rules plus a learned transformer (write-up, code, design notes)
 ```
 
 ## Reproducing

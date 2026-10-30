@@ -73,3 +73,4 @@ Real work only. One line per day, newest last.
 
 - **2026-10-01.** This repository assembled from the working repository. Market-module confirmation (step 0)
   not yet run.
+- **2026-10-30.** Hybrid ML agent published in `ml-agent/`: 0.913 of the 5th-place agent's bank over 78 games.
