@@ -1,5 +1,10 @@
 # Roadmap
 
+> **Superseded (2026-10-30): this plan was never carried out.** We started again with the template agent instead,
+> then moved to the hybrid ML agent ([`ml-agent/`](../ml-agent/)). Its premise, that the top agents play a season
+> plan optimised offline (a "tape"), was wrong: they were trained networks
+> ([correction](../analysis/top-agents/LEARNED_POLICIES_2026-10-15.md)). Kept unchanged below as the record.
+
 This is a plan, not a result. Order matters: each step produces what the next one needs, and each ends in a
 measurement that decides whether to continue.
 

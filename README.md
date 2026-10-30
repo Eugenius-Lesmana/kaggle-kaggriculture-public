@@ -1,38 +1,39 @@
-# Kaggriculture: a counter-focused agent, and what the leaderboard taught us
+# Kaggriculture: from a tuned script to a learned agent
 
-Our work on the Kaggle **Kaggriculture** simulation competition: the agent we submitted, our analysis of the
-leaderboard and the top teams, and an unfinished second agent.
+Our work on the Kaggle **Kaggriculture** simulation competition, start to finish: the agent we submitted, what the
+leaderboard taught us, and the three agents of our own we built afterwards. The last of them, a hybrid of rules
+and a trained network, is our final result. **The project is finished.**
 
-| Part | Status | Where |
-|---|---|---|
-| Final agent: F4 + counter + race + wheat round-trip + look-ahead 10 + snipe | **Finished, submitted** | [`agent/`](agent/) |
-| Leaderboard and top-agent analysis | **Finished** | [`analysis/`](analysis/) |
-| A new agent: our own planner, built from what the top teams do | **Unfinished.** We ran out of time. Work continues. | [`next-agent/`](next-agent/) |
-| ML agent: template rules plus a transformer trained by imitating the 4th-place agent | **Finished** (after the deadline): 0.913 of the 5th-place agent's bank | [`ml-agent/`](ml-agent/) |
+| Chapter | What | Status | Where |
+|---|---|---|---|
+| 1. During the competition | Leaderboard analysis, and the submitted agent: the public F4 script plus five small layers | Finished, submitted | [`agent/`](agent/), [`analysis/`](analysis/) |
+| 2. After the deadline: our own planner | An adaptive planner written from scratch | Closed at 0.70 of Metav4's bank | [`next-agent/`](next-agent/) |
+| 3. The template agent | Rules that rebuild a top team's farm and score worker jobs step by step | Finished at 0.913 of Metav4's bank; stopped there | [`next-agent/docs/`](next-agent/docs/), code in [`ml-agent/vendor/template_agent/`](ml-agent/vendor/template_agent/) |
+| 4. **The ML agent (final)** | The template's rules plus a transformer trained by imitating the 4th-place agent | **Finished: 0.913 of the 5th-place agent's bank** | [`ml-agent/`](ml-agent/) |
 
-Everything here is a dated lab record. Numbers come from local games against a fixed opponent panel, or from
-replays of public ladder games. Where a result did not hold up on the live ladder, we say so below.
+Everything here is a dated lab record. Numbers come from local games against fixed opponents, or from replays of
+public ladder games. Where a result did not hold up on the live ladder, we say so.
 
-## At a glance
+## Results at a glance
 
-**The task.** Kaggriculture is a two-player farming simulation on Kaggle: plant, raise animals, sell into
-markets both players share, and finish a 30-day season with more money than the opponent. Each entry is an
-agent that plays every turn.
+Share = our final bank divided by the opponent's, summed over paired games (same seeds, both seats unless noted).
+**Read the opponent column**: Metav4 is a strong public script; the 5th-place agent is a trained network and much
+stronger.
 
-**What we found first.** A census of 139 mid-ladder replays from 137 teams showed that about **80% of the
-ladder ran forks of one public scripted agent** (Metav4 and its successors), and none ran an exact public copy.
-We also built a replay inspector to study games turn by turn (see [below](#the-replay-inspector)).
+| Agent | Opponent | Share | Wins | Games |
+|---|---|---:|---:|---:|
+| Our planner (chapter 2) | Metav4 | 0.70 | — | 560 |
+| Template agent, final (chapter 3) | Metav4 | 0.913 | 2 | 24 (one seat) |
+| Template agent, final | 5th-place agent | 0.695 | 0 | 48 |
+| ML agent, an earlier version (board-p2) | Metav4 | 1.242 | 45 | 48 |
+| **ML agent, final (chapter 4)** | **5th-place agent** | **0.913** | 3 | 78 |
+| The 4th-place agent we learned from, for reference | 5th-place agent | 1.020 | 42 | 48 |
 
-**Two lines of work followed.**
+The two 0.913s are a coincidence: the same number against two very different opponents. The final ML agent was not
+re-measured against Metav4; its earlier versions already beat Metav4 in 45-46 of 48 games.
 
-| Line | What it is | Headline result |
-|---|---|---|
-| Optimise the script | Small layers on the public F4 script that change how and when it sells | Our counter layer won **70 of 80** games against the unmodified script (70–4–6). The final agent was submitted. |
-| Our own adaptive agent | An agent that decides from the game state each turn instead of replaying fixed moves | **0.913 of Metav4's final bank** on 24 paired seeds (0.896–0.919 across five setups), reached on 15 October, after the deadline. Not submitted. |
-
-**How it was judged.** Every change to the script was a paired test: the same seeds, played from both seats,
-80 games, with a repeat on fresh seeds before a layer was kept. One change won **66–14** locally yet rated lower on the live ladder.
-Details in [How we tested](#how-we-tested).
+The submitted agent (chapter 1) was judged differently, by wins and losses against other scripts and by its ladder
+rating; see below.
 
 ## The game
 
@@ -40,17 +41,21 @@ Two players farm for a 30-day season (720 steps, 24 per day) and sell into **sha
 money at the end wins. Selling fewer units of a product raises the opponent's price for it, so every decision
 also changes the opponent's income. Engine: `kaggle-environments` 1.32.7.
 
+---
+
+# Chapter 1. During the competition
+
 ## What the ladder looked like
 
 We measured it from 139 mid-ladder replays (ranks ~50–500, 137 teams): about **80% of teams play one tape
-family** (Metav4 and its successors). A "tape" is a fixed table of actions per step, optimised offline for the
-whole season. Nobody runs a public file unchanged; most are forks that change a few steps. Details in
-[`analysis/leaderboard/`](analysis/leaderboard/).
+family** (Metav4 and its successors). A "tape" is a fixed table of actions per step. Nobody runs a public file
+unchanged; most are forks that change a few steps. Details in [`analysis/leaderboard/`](analysis/leaderboard/).
 
 Against that field, a strong tape agent mostly loses or draws to near-copies of itself, and the games are
-decided by tiny edits: who sells first at a lifted price.
+decided by tiny edits: who sells first at a lifted price. We also built a replay inspector to study games turn by
+turn (see [below](#the-replay-inspector)).
 
-## Our final agent
+## Our submitted agent
 
 [`agent/main.py`](agent/main.py) is the public **F4** notebook agent plus five small layers. Most of the 1.2 MB is
 inherited and machine-generated. Our changes are a few hundred lines. They are shown as diffs in
@@ -104,15 +109,27 @@ Each layer against its baseline (W–L–T for the newer agent; every row is 80 
 The raw game file behind the 66–14 row is not published; the figure comes from the dated note linked in that
 row. The two confirmations are published game files.
 
-**Local wins did not guarantee ladder gains.** Race + wheat beat F4 + counter **66–14** locally, but on the
-live ladder it was rated about **1,898 over 231 games**, below F4 + counter's **about 2,200 over
-153 games**. These are two separate submissions rated against a changing field, so this is not a controlled
-comparison. Our reading is that a fixed local panel did not represent a ladder of forks that each differ in
-some way; we have not verified the cause.
+The agents of chapters 2-4 were tested differently: paired seeds, reported as the mean difference in bank with
+its standard error, and confirmed on fresh seeds before a change was kept.
 
-The adaptive agent below was tested differently: 24 paired seeds from one seat against Metav4, reported as a
-mean difference with its standard error, then repeated in four other setups (seats swapped, two other
-opponents, fresh seeds).
+### What happened on the live ladder
+
+- **F1 + counter** (96 games): 51–44–1, rating about 2,186, peak about 2,350.
+- **F4 + counter** (153 games): 93–58–2, rating about 2,200. It went **5–18 against opponents rated 2,300+**.
+  Most of those losses were to *close F4 forks*: they play F4 exactly, then sell a little earlier at one or two
+  steps. Its rating stood at 2,093 when we deactivated it.
+- **Race + wheat** (231 games): rating about **1,898**, below F4 + counter, even though it beat F4 + counter
+  66–14 locally. Our local panel did not predict the ladder. We have no verified explanation.
+- **Look-ahead 10**, submitted on the final day, is rated **1,872.3**. **Look-ahead 10 + snipe** (the final agent,
+  submitted last) is rated **1,776.9**. Neither rating has settled yet, but the snipe version is the lower of the
+  two even though it beat look-ahead 10 locally 60–18–2.
+- The public notebook whose four lines we added was around 2,300 when we looked. Locally our final agent beats
+  it 77–3.
+
+Take-away: none of our three late agents rates above F4 + counter, even though each beat its predecessor locally.
+Tuning a late layer on a fixed local panel did not transfer to a ladder of forks that each change something
+different. We have not established why. These two submissions are rated against a changing field, so this is not
+a controlled comparison.
 
 ## The replay inspector
 
@@ -144,24 +161,6 @@ moves against public agents, step by step. Those are described in
 **The inspector's code is not in this repository.** It bundles third-party public agents for its matches and
 would need those removed first. It was built with AI assistance (see Credits).
 
-### What happened on the live ladder
-
-- **F1 + counter** (96 games): 51–44–1, rating about 2,186, peak about 2,350.
-- **F4 + counter** (153 games): 93–58–2, rating about 2,200. It went **5–18 against opponents rated 2,300+**.
-  Most of those losses were to *close F4 forks*: they play F4 exactly, then sell a little earlier at one or two
-  steps. Its rating stood at 2,093 when we deactivated it.
-- **Race + wheat** (231 games): rating about **1,898**, below F4 + counter, even though it beat F4 + counter
-  66–14 locally. Our local panel did not predict the ladder. We have no verified explanation.
-- **Look-ahead 10**, submitted on the final day, is rated **1,872.3**. **Look-ahead 10 + snipe** (the final agent,
-  submitted last) is rated **1,776.9**. Neither rating has settled yet, but the snipe version is the lower of the
-  two even though it beat look-ahead 10 locally 60–18–2.
-- The public notebook whose four lines we added was around 2,300 when we looked. Locally our final agent beats
-  it 77–3.
-
-Take-away: none of our three late agents rates above F4 + counter, even though each beat its predecessor locally.
-Tuning a late layer on a fixed local panel did not transfer to a ladder of forks that each change something
-different. We have not established why.
-
 ## What the top teams do
 
 > **Correction, 2026-10-15.** The teams' own write-ups, published after the competition, show that the top
@@ -189,65 +188,96 @@ Full write-up: [`analysis/`](analysis/). The short version:
 - **A fourth top team plays differently**: heavy product trading, about 3,470 wheat units sold per game, for
   a similar final bank.
 
-## The next agent
+---
 
-Our own planner reaches about **0.70 of Metav4's bank** in paired games. We ran about 22 single changes meant
-to close the gap. One was a small gain still waiting for confirmation; the rest were neutral or negative.
-Copying the top teams' routes, plan or job priorities onto our executor did not work either. The gap is
-structural. (We wrote here that the top agents' season was optimised as one piece, offline. Their write-ups
-show they were trained networks instead; see the correction above.)
+# Chapter 2. After the deadline: our own planner (closed)
 
-The plan is to do the same for our own farm: search for a whole-season plan automatically, with real games as
-the judge, and keep the planner as the fallback when a game drifts from the plan. That is unfinished.
+The submitted agent is a fork of a public script. We wanted an agent of our own that decides from the game state
+each turn. The first attempt, a planner built up since 7 September, reaches about **0.70 of Metav4's bank**
+(about $82k against $117k, 560 paired games).
 
-See [`next-agent/`](next-agent/).
+We ran about 22 single changes meant to close the gap, most of them copied from the top teams. One was a small gain
+still waiting for confirmation; the rest were neutral or negative. Copying the top teams' routes, plan or job
+priorities onto our executor did not work either: their moves answer their own farm, cash and opponent.
 
-## Our own adaptive agent
+We then planned to search for a whole-season plan automatically and keep the planner as a fallback
+([`next-agent/ROADMAP.md`](next-agent/ROADMAP.md)). That plan was **never carried out**: we started again with the
+template agent instead, and its premise, that the top agents play an offline-optimised tape, turned out to be
+wrong. Details: [`next-agent/`](next-agent/), [`next-agent/docs/EXPERIMENT_LOG.md`](next-agent/docs/EXPERIMENT_LOG.md).
 
-The **template agent** is our second attempt at an agent of our own. It does not replay fixed moves. Each
-turn it reads the farm, the shops that are open and the market prices, decides what the farm should look like,
-and assigns each worker its next job by scoring the jobs available in the current state.
+# Chapter 3. The template agent (finished, then stopped)
 
-Its layout targets are not our own design: they were learned from **169 public replays of one top team**.
-What we added is the decision-making that carries them out, and a series of measured fixes to it.
+The **template agent** is a second, separate attempt; it is not a continuation of the planner. Each turn it reads
+the farm, the shops that are open and the market prices, decides what the farm should look like, and gives each
+worker its next job by scoring the jobs available in the current state. Its layout targets come from **169 public
+replays of one top team**; the decision-making that carries them out, and a series of measured fixes, are ours.
 
-| Agent | Share of Metav4's final bank | Games |
+| Version | Share of Metav4's final bank | Games |
 |---|---:|---|
-| Our planner (first attempt, a separate agent) | 0.70 | 560 paired games |
-| Template agent, first working version | 0.790 | 24 paired seeds, one seat |
-| Template agent, 10 October | 0.892 | 24 paired seeds, one seat |
-| Template agent, current version (end-of-day fix, 15 October) | **0.913** | 24 paired seeds, one seat |
+| First working version (early October) | 0.52, then 0.790 | 24 paired seeds, one seat |
+| 10 October | 0.892 | 24 paired seeds, one seat |
+| **Final: end-of-day fix (15 October)** | **0.913** | 24 paired seeds, one seat |
 | Same version, other setups | 0.916 / 0.919 / 0.918 / 0.896 | seats swapped / against F1 / against F4 / fresh seeds, 24 games each |
 
-The 0.70 and the 0.913 belong to **two different agents**; the template agent is not a continuation of the
-planner. The target was at least 0.9: met in four of five setups, but the agent still does not beat Metav4
-(2 of 24 standard games won).
+The target was at least 0.9 of Metav4's bank: met in four of five setups. All of this came **after the
+competition's submission deadline**; the template agent was never submitted, so it has no ladder rating. Its
+code is published in [`ml-agent/vendor/template_agent/`](ml-agent/vendor/template_agent/). Progress notes:
+[`2026-10-11`](next-agent/docs/TEMPLATE_PROGRESS_2026-10-11.md),
+[`2026-10-16`](next-agent/docs/TEMPLATE_PROGRESS_2026-10-16.md).
 
-All of this came **after the competition's submission deadline**; the template agent was **never submitted** to
-the ladder, so it has no ladder rating. Its code is published with the ML agent, in
-[`ml-agent/vendor/template_agent/`](ml-agent/vendor/template_agent/). The latest progress note, with the
-end-of-day fix, a dollar ledger of what is still missing, and what did not work:
-[`next-agent/docs/TEMPLATE_PROGRESS_2026-10-16.md`](next-agent/docs/TEMPLATE_PROGRESS_2026-10-16.md)
-(earlier: [`2026-10-11`](next-agent/docs/TEMPLATE_PROGRESS_2026-10-11.md)).
+### Why we stopped there
 
-### Next: a hybrid agent with a learned worker policy (finished, see `ml-agent/`)
+- **0.913 was not enough.** The agent still lost to Metav4 in 22 of 24 games, and against the 5th-place agent it
+  reaches only 0.695 of its bank.
+- **It had hit a hard limit.** The fixes that worked recovered waste at almost no cost in worker time (goods the
+  engine destroyed at midnight and on the last day). Every fix that needed worker time took it from other work and
+  came out level or worse. The part that hands out worker time, a step-by-step scoring of jobs with hand-set
+  weights, could not be improved further by hand.
+- **The top teams had shown another way.** Their write-ups (published 15 October) showed trained networks with a
+  few rules on top. So we kept the template's rules for what they do well and replaced the job scoring with a
+  learned model: chapter 4.
 
-The template agent plans the farm well but cannot hand out worker time any better by hand: every fix that needed
-worker time took it from other work. The top teams' write-ups show they used trained networks. Our hybrid agent
-keeps the template for the opening and the last day, and lets a transformer, trained by imitating the 4th-place
-agent and corrected in five rounds, run the workers and the market on days 6-28. Against the 5th-place agent it
-reaches **0.913 of its bank** over 78 games (the template alone: 0.695). Write-up, code and design notes:
-[`ml-agent/`](ml-agent/).
+# Chapter 4. The ML agent (final result)
+
+The final agent is a hybrid:
+- **Days 0-5 and day 29:** the template agent plays. It opens the farm well and liquidates at the end.
+- **Days 6-28:** a transformer over the whole board decides every worker's command and the market orders. It was
+  trained by imitating the 4th-place agent, used as a black box, and then corrected in five rounds in which the
+  4th-place agent took over our own games and we recorded what it would have done.
+- **On top:** a few end-of-day and end-of-game rules that every top team also found worth adding.
+
+It went through a gradient-boosted job ranker first (level with the template), then the whole-board network. The
+network beat Metav4 outright (1.22-1.24 of its bank, 45-46 of 48 games won), so the benchmark moved to the
+5th-place agent, a trained network:
+
+| Agent | Share of the 5th-place agent's bank | Games |
+|---|---:|---:|
+| Template agent | 0.695 | 48 |
+| Network runs the workers | 0.776 | 48 |
+| + network market orders, correction rounds | 0.800 → 0.839 | 48 each |
+| + end-of-game rules | 0.871 | 48 |
+| + a focused correction round (board-p5) | 0.910 | 96 |
+| **+ a day-29 selling rule (final)** | **0.913** | 78 |
+
+Imitation stopped improving after board-p5: another correction round and a separate market model both failed. We
+measured where the rest of the gap is (worker decisions and the market contribute about equally; the 5th-place
+agent sells first after the town buys) and built a speed prototype for reinforcement learning, which runs about
+10x more games an hour than before. Reaching 0.94-0.95 would still take weeks of training, so we stopped here.
+
+Full write-up, code and design notes: [`ml-agent/`](ml-agent/).
+
+---
 
 ## Repository map
 
 ```
-agent/        final submission, licence, notices, diffs of every layer we added
-analysis/     leaderboard census, ladder diagnosis, top-agent studies (dated lab notes)
+agent/        chapter 1: the submitted agent, licence, notices, diffs of every layer we added
+analysis/     chapter 1: leaderboard census, ladder diagnosis, top-agent studies (dated lab notes)
 evidence/     result files behind the analysis (per-game rows, summary tables, scripts)
 tools/        game screen, replay fetcher, opponent classifier
-next-agent/   unfinished planner, its experiment log and roadmap
-ml-agent/     hybrid agent: template rules plus a learned transformer (write-up, code, design notes)
+next-agent/   chapters 2 and 3: the planner (code, experiment log, the roadmap we did not carry out) and the
+              template agent's progress notes
+ml-agent/     chapter 4: the final hybrid agent (write-up, code, design notes, dated reports)
 ```
 
 ## Reproducing
@@ -258,7 +288,8 @@ python tools/screen.py --candidate agent/main.py --opponent agent/main.py --seed
 ```
 
 Full instructions: [`tools/README.md`](tools/README.md). Games take about 10–30 seconds each. Use at most
-2 workers on a laptop.
+2 workers on a laptop. The ML agent needs its trained weights and data, which are not published; see
+[`ml-agent/`](ml-agent/).
 
 ## What is not here
 
@@ -266,15 +297,16 @@ Full instructions: [`tools/README.md`](tools/README.md). Games take about 10–3
   rebuild them from replays you fetch yourself.
 - A few large derived tables (over 1 MB). They are listed in
   [`evidence/README.md`](evidence/README.md#files-not-included).
+- The ML agent's model weights, training data and game results (tens of GB).
 - Our earlier agents (v0.1–v0.10) and the replay inspector. They stay in our working repository.
 
 ## Team
 
 Two people. **Eugenius Lesmana** (this repository's owner) made 214 of the 226 commits in our working
-repository. He built the replay inspector, ran the ladder census and the top-team studies, designed the
-counter and the sale-timing layers, set up the paired-testing method, and built the planner and the template
-agent. The other team member contributed to the simulation lab, the tests and an early strategy branch.
-Commit counts show who committed, not who wrote each line; see the AI-assistance note below.
+repository. He built the replay inspector, ran the ladder census and the top-team studies,
+designed the counter and the sale-timing layers, set up the paired-testing method, and built the planner, the
+template agent and the ML agent. The other team member contributed to the simulation lab, the tests and an early
+strategy branch. Commit counts show who committed, not who wrote each line; see the AI-assistance note below.
 
 ## Credits and licence
 
@@ -282,9 +314,11 @@ Commit counts show who committed, not who wrote each line; see the AI-assistance
 - The agent in [`agent/`](agent/) derives from public Kaggle notebooks. Their authors are credited in
   [`NOTICE`](NOTICE) and [`agent/NOTICE.txt`](agent/NOTICE.txt), and every upstream notice stays inside
   `agent/main.py`.
+- The ML agent learned from the 4th-place team's published agent (CC BY 4.0) and was evaluated against the
+  5th-place team's published agent (MIT); neither is included here.
 - Kaggle and the `kaggle-environments` contributors wrote the engine.
 - Much of the analysis and code was written with AI assistants (Claude and Codex), under the authors' direction.
-- Top-ranked leaderboard teams are anonymised as **Team A–G**; the same letter is the same team in every note.
-  Other ladder opponents are replaced by hashes in `evidence/census/`. Kaggle episode and submission IDs are kept
-  as evidence references.
+- Top-ranked leaderboard teams are anonymised as **Team A–G**, or named by final rank; the same letter is the same
+  team in every note. Other ladder opponents are replaced by hashes in `evidence/census/`. Kaggle episode and
+  submission IDs are kept as evidence references.
 - The snipe changes come from the public notebook `a-song-of-ice-and-fire-fixed-flexible` by AlekseiProvorov.

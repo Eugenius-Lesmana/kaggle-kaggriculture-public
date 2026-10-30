@@ -1,5 +1,9 @@
 # Template agent: progress on 2026-10-16
 
+> **Update (2026-10-30):** this is the template agent's final note; it was not developed further. The hybrid agent
+> announced at the end as "in progress" is finished: see [`ml-agent/`](../../ml-agent/). It moved from the
+> gradient-boosted ranker described below to a whole-board transformer trained by imitating the 4th-place agent.
+
 Supersedes [`TEMPLATE_PROGRESS_2026-10-11`](TEMPLATE_PROGRESS_2026-10-11.md), which stays unchanged as the
 earlier record. Every figure below was measured; estimates are marked.
 

@@ -1,15 +1,20 @@
-# Next agent (unfinished)
+# Next agent: the planner and the template agent (closed)
 
-We are building a second agent that is **not** a fork of the Metav4 / F1 / F4 tape family: our own planner,
-informed by what the top teams do. **We did not finish it before the deadline.** It is still being worked on.
-This folder is the honest state of that work: what exists, what we measured, and what is missing.
-
-> **Current level (2026-10-16):** two attempts, neither finished; a third (hybrid, with a learned worker policy) is starting.
-> - **Planner:** about **0.70 of Metav4's bank** in paired games (about $82k against $117k, 560 games).
+> **Status (2026-10-30): closed.** This folder holds chapters 2 and 3 of the [main README](../README.md): our first two
+> agents of our own, built after the deadline. Both are finished and no longer worked on. The final agent is the
+> hybrid ML agent in [`ml-agent/`](../ml-agent/), which reaches 0.913 of the 5th-place agent's bank.
+> - **Planner:** about **0.70 of Metav4's bank** in paired games (about $82k against $117k, 560 games). Closed.
 > - **Template agent:** **0.913 of Metav4's bank** (about $92k against $102k, 24 games; 0.896–0.919 in four
->   other setups). The target was 0.9. Its code is not published yet.
+>   other setups). The target was 0.9. Stopped there: it still lost 22 of 24 games to Metav4, and hand-tuning the
+>   job scoring had hit its limit. Its rules live on in the ML agent; its code is in
+>   [`ml-agent/vendor/template_agent/`](../ml-agent/vendor/template_agent/).
 >
-> Neither beats the agents in [`agent/`](../agent/).
+> The text below is the record as it stood during the work. Where it says "still being worked on" or describes a
+> plan, read it as history.
+
+We built a second agent that is **not** a fork of the Metav4 / F1 / F4 tape family: our own planner, informed by
+what the top teams do. We did not finish it before the deadline. This folder is the honest state of that work:
+what exists, what we measured, and what is missing.
 
 ## Timeline
 
@@ -21,10 +26,12 @@ This folder is the honest state of that work: what exists, what we measured, and
 | 7 to 10 Oct | Template agent improved by measurement: five confirmed changes, eight dropped | 0.89 (then) | [`TEMPLATE_PROGRESS`](docs/TEMPLATE_PROGRESS_2026-10-11.md) |
 | 11 Oct | Paused until the competition's grading ends | 0.89 (then) | [`TEMPLATE_PROGRESS`](docs/TEMPLATE_PROGRESS_2026-10-11.md) |
 | 15 to 16 Oct | Top teams' write-ups read; end-of-day fix confirmed in five setups; animal and land fixes level | 0.913 | [`TEMPLATE_PROGRESS`](docs/TEMPLATE_PROGRESS_2026-10-16.md) |
-| from 16 Oct | Hybrid agent: rules for the plan, a learned model for worker jobs | not yet measured | — |
+| 16 Oct | Template agent stopped: hand-tuned job scoring at its limit | 0.913 (final) | [`TEMPLATE_PROGRESS`](docs/TEMPLATE_PROGRESS_2026-10-16.md) |
+| 16 to 30 Oct | Hybrid ML agent: the template's rules plus a trained transformer. Finished. | beats Metav4 (45–46 of 48 games); 0.913 of the 5th-place agent's bank | [`ml-agent/`](../ml-agent/) |
 
-The rest of this page describes the planner. The template agent has its own note, with a table of its
-versions. Its code and the study of the reference team will be added after grading ends.
+The rest of this page describes the planner. The template agent has its own notes, with a table of its
+versions. Its code is in [`ml-agent/vendor/template_agent/`](../ml-agent/vendor/template_agent/); the study of the
+reference team is not published.
 
 ## The planner: what exists
 

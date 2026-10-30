@@ -2,6 +2,8 @@
 
 After the competition we built a second agent: our rule-based template plans the farm and a transformer, trained by
 imitating the 4th-place agent, runs the workers and the market. This folder holds its write-up, code and design notes.
+It is chapter 4, the final result, of the [main README](../README.md); chapters 1-3 cover the competition, our
+planner and the template agent.
 
 **Result.** Our final agent, `net:board-p5:market:overflow:endmask:endwork:end29`, finishes with **0.913 of the bank of
 fifth-nflow** (the published 5th-place agent) over 78 full games: 96,943 against 106,188 a game, 3 wins. Our
